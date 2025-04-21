@@ -1,9 +1,18 @@
 "use client"
 
+import Head from "next/head" // ✅ Add Head
 import { TiltCard } from "@/components/ui/tilt-card"
 import { ScrollReveal } from "@/components/animations/scroll-reveal"
 import { motion } from "framer-motion"
-import { LucideBrain, LucideShield, LucideUsers, LucideBarChart, LucideLock, LucideTarget } from "lucide-react"
+import {
+  LucideBrain,
+  LucideShield,
+  LucideUsers,
+  LucideBarChart,
+  LucideLock,
+  LucideTarget,
+} from "lucide-react"
+
 
 const FeaturePageContent = () => {
   const features = [
@@ -53,6 +62,43 @@ const FeaturePageContent = () => {
 
   return (
     <div className="pt-16">
+      <Head>
+  <title>Features | SlateMate - AI-Powered Learning & Parental Controls</title>
+  <meta
+    name="description"
+    content="Explore SlateMate's intelligent features for safe and personalized student learning — from AI-powered learning paths to parent dashboards and data privacy tools."
+  />
+  <meta
+    name="keywords"
+    content="SlateMate Features, AI education, parental control app, student monitoring, digital learning tools, AI school management, adaptive learning, EdTech safety"
+  />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="SlateMate Team" />
+  <meta name="language" content="en" />
+
+  {/* Open Graph */}
+  <meta property="og:title" content="Features | SlateMate" />
+  <meta
+    property="og:description"
+    content="Explore SlateMate's powerful AI and safety features including parental controls, adaptive learning, and analytics dashboards."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.slatemate.in/features" />
+  <meta property="og:image" content="https://www.slatemate.in/og-image.jpg" />
+  <meta property="og:site_name" content="SlateMate" />
+  <meta property="og:locale" content="en_US" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SlateMate Features" />
+  <meta
+    name="twitter:description"
+    content="AI-powered school management and parental control tools in one platform."
+  />
+  <meta name="twitter:image" content="https://www.slatemate.in/twitter-image.png" />
+  <meta name="twitter:site" content="@slatemate_in" />
+</Head>
+
       {/* Hero Section */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-electric/10 via-emerald/10 to-golden/10">
         <div className="container mx-auto px-4">
