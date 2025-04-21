@@ -196,7 +196,6 @@ export default function RootLayout({
             <Analytics />
           </Suspense>
           <Toaster />
-          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>
