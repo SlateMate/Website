@@ -102,7 +102,7 @@ function DemoRequestForm() {
   return (
     <form
       className="space-y-4"
-      action="https://script.google.com/macros/s/AKfycbwVNgdUCAhysz4Goguu98jVx8GjgxxbvcnfOQH3MD3aFEl9YKWJ_l9X5oFLXYSNAUacqQ/exec"
+      action="https://script.google.com/macros/s/AKfycbwhAgFAoOZYuzJKUh1PdpB0Bizc840Q06xoWow96hQgxKYCYpJV2B0CBklgUc_5np_SJQ/exec"
       method="POST"
     >
       <div className="space-y-2">
