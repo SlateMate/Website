@@ -92,6 +92,10 @@ export const metadata: Metadata = {
   ],
   creator: "SlateMate Team",
   publisher: "SlateMate",
+  category: "education",
+  themeColor: "#1E2A38",
+  viewport: "width=device-width, initial-scale=1",
+  language: "en-IN",
 }
 
 export default function RootLayout({
@@ -103,6 +107,9 @@ export default function RootLayout({
     <html lang="en" dir="ltr" suppressHydrationWarning>
       <head>
         <meta charSet="utf-8" />
+        <meta name="theme-color" content="#1E2A38" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>SlateMate | AI for Safer Digital Learning</title>
 
         {/* Google Tag Manager */}
         <script
@@ -159,6 +166,7 @@ export default function RootLayout({
           }}
         />
       </head>
+
       <body
         className={`${poppins.variable} font-sans bg-background text-foreground antialiased`}
       >
@@ -189,6 +197,7 @@ export default function RootLayout({
             <Analytics />
           </Suspense>
           <Toaster />
+          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>
