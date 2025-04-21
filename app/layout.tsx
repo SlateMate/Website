@@ -22,15 +22,21 @@ export const metadata: Metadata = {
     template: "%s | SlateMate",
   },
   description:
-    "AI-powered platform for school safety, parental control, and academic performance.",
+    "SlateMate is an AI-powered platform transforming school safety, parental control, and student achievement tracking across India.",
   metadataBase: new URL("https://www.slatemate.in"),
   keywords: [
     "SlateMate",
+    "EdTech",
+    "AI in Education",
     "School Management System",
     "Parental Control App",
-    "Digital Safety for Students",
-    "AI in Education",
+    "Student Performance Tracker",
+    "Digital Parenting",
+    "Safe Internet for Kids",
     "EdTech India",
+    "AI Child Monitoring",
+    "AI Learning Platform",
+    "AI-Powered EdTech",
   ],
   openGraph: {
     siteName: "SlateMate",
@@ -38,13 +44,13 @@ export const metadata: Metadata = {
     url: "https://www.slatemate.in",
     title: "SlateMate – AI-Powered School & Parental Control Platform",
     description:
-      "Smart learning meets safe browsing. Track, protect, and empower every student.",
+      "Smart learning meets safe browsing. Track, protect, and empower every student with AI.",
     images: [
       {
         url: "https://www.slatemate.in/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "SlateMate – AI dashboard with child safety features and progress tracking",
+        alt: "SlateMate AI EdTech Platform – Child Safety & Progress Monitoring",
       },
     ],
     locale: "en_IN",
@@ -54,7 +60,7 @@ export const metadata: Metadata = {
     creator: "@slatemate",
     title: "SlateMate – Empowering Schools & Parents with AI",
     description:
-      "Smart parental control, real-time student progress & safe digital learning.",
+      "Smart parental control, real-time student progress & safe digital learning for modern Indian families.",
     images: ["https://www.slatemate.in/og-image.jpg"],
   },
   icons: {
@@ -74,6 +80,18 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  authors: [
+    {
+      name: "Ayush Ranjan",
+      url: "https://www.linkedin.com/in/ayushranjan636",
+    },
+    {
+      name: "Sagar Gujrati",
+      url: "https://www.linkedin.com/in/sagar-gujrati-a30822293/",
+    },
+  ],
+  creator: "SlateMate Team",
+  publisher: "SlateMate",
 }
 
 export default function RootLayout({
@@ -99,7 +117,7 @@ export default function RootLayout({
           }}
         />
 
-        {/* JSON-LD Structured Data */}
+        {/* JSON-LD Structured Data for SEO */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -109,10 +127,34 @@ export default function RootLayout({
               name: "SlateMate",
               url: "https://www.slatemate.in",
               logo: "https://www.slatemate.in/logo.png",
+              foundingDate: "2024",
+              email: "contact@slatemate.in",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Chennai",
+                addressRegion: "Tamil Nadu",
+                addressCountry: "India",
+              },
               sameAs: [
                 "https://twitter.com/slatemate",
                 "https://www.linkedin.com/company/slatemate",
               ],
+              founder: [
+                {
+                  "@type": "Person",
+                  name: "Ayush Ranjan",
+                  jobTitle: "CTO & Co-founder",
+                  url: "https://www.linkedin.com/in/ayushranjan636",
+                },
+                {
+                  "@type": "Person",
+                  name: "Sagar Gujrati",
+                  jobTitle: "CEO & Co-founder",
+                  url: "https://www.linkedin.com/in/sagar-gujrati-a30822293/",
+                },
+              ],
+              description:
+                "SlateMate is a next-generation educational platform focused on child safety, AI-powered parental control, and academic growth tracking in India.",
             }),
           }}
         />
