@@ -8,7 +8,6 @@ import { Footer } from "@/components/navigation/footer"
 import { PageTransition } from "@/components/animations/page-transition"
 import { Analytics } from "@/components/analytics"
 import { Toaster } from "@/components/ui/toaster"
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const poppins = Poppins({
   subsets: ["latin"],
