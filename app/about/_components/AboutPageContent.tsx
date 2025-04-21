@@ -5,7 +5,7 @@ import Image from "next/image"
 import { ScrollReveal } from "@/components/animations/scroll-reveal"
 import { TiltCard } from "@/components/ui/tilt-card"
 import { Button } from "@/components/ui/button"
-import Head from 'next/head' // Import Head from next/head
+import Head from "next/head"
 
 export default function AboutContent() {
   const team = [
@@ -25,19 +25,45 @@ export default function AboutContent() {
 
   return (
     <div className="pt-16">
-      {/* Adding meta tags for SEO */}
       <Head>
-        <title>About SlateMate</title>
-        <meta name="description" content="SlateMate is transforming education through AI-powered safety, personalized learning, and innovative technology. Meet our passionate team and learn about our mission." />
-        <meta name="keywords" content="SlateMate, AI in education, personalized learning, student safety, edtech, technology for education, innovative learning solutions" />
-        <meta property="og:title" content="About SlateMate" />
-        <meta property="og:description" content="SlateMate is transforming education through AI-powered safety, personalized learning, and innovative technology. Meet our passionate team and learn about our mission." />
-        <meta property="og:image" content="/mission.jpeg?text=Our+Mission&fontsize=24&bg=1E2A38&fg=FFFFFF" />
+        <title>About SlateMate | AI-powered EdTech from IIT Madras</title>
+        <meta
+          name="description"
+          content="SlateMate is an AI-powered EdTech startup pre-incubated at Nirmaan Pre-Incubator, IIT Madras. Founded by Ayush Ranjan and Sagar Gujrati, SlateMate is redefining digital safety and personalized learning."
+        />
+        <meta
+          name="keywords"
+          content="SlateMate, IIT Madras startup, Nirmaan pre-incubation, Ayush Ranjan, Sagar Gujrati, AI education, EdTech India, student safety, personalized learning, education technology, CFI IIT Madras, Nirmaan IITM"
+        />
+        <meta name="author" content="SlateMate Team" />
+        <meta name="robots" content="index, follow" />
+        <meta name="copyright" content="SlateMate" />
+        <meta name="language" content="English" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="About SlateMate | AI-powered EdTech from IIT Madras" />
+        <meta
+          property="og:description"
+          content="SlateMate is a visionary AI-driven education platform, founded by Ayush Ranjan and Sagar Gujrati, and pre-incubated at IIT Madras' Nirmaan Pre-Incubator."
+        />
+        <meta property="og:image" content="/mission.jpeg?text=SlateMate+Mission" />
         <meta property="og:url" content="https://slatemate.in/about" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="SlateMate" />
+
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About SlateMate" />
-        <meta name="twitter:description" content="SlateMate is transforming education through AI-powered safety, personalized learning, and innovative technology. Meet our passionate team and learn about our mission." />
-        <meta name="twitter:image" content="/mission.jpeg?text=Our+Mission&fontsize=24&bg=1E2A38&fg=FFFFFF" />
+        <meta name="twitter:title" content="SlateMate | AI Education from IIT Madras" />
+        <meta
+          name="twitter:description"
+          content="AI-powered education platform developed by Ayush Ranjan and Sagar Gujrati. Backed by Nirmaan at IIT Madras for safe and personalized learning experiences."
+        />
+        <meta name="twitter:image" content="/mission.jpeg?text=SlateMate+Mission" />
+        <meta name="twitter:creator" content="@slatemate_in" />
+        <meta name="twitter:site" content="@slatemate_in" />
+
+        <meta name="application-name" content="SlateMate" />
+        <meta name="theme-color" content="#1E2A38" />
       </Head>
 
       {/* Hero */}
@@ -66,8 +92,9 @@ export default function AboutContent() {
                   tools they need to guide and support that journey.
                 </p>
                 <p className="text-lg text-foreground/80">
-                  Founded in collaboration with IIT Madras and the Center for Innovation, SlateMate represents the
-                  cutting edge of educational technology with a human-centered approach.
+                  Founded in collaboration with IIT Madras and the Center for Innovation, SlateMate is pre-incubated at
+                  the Nirmaan Pre-Incubator and represents the cutting edge of educational technology with a
+                  human-centered approach.
                 </p>
               </div>
             </ScrollReveal>
@@ -113,8 +140,8 @@ export default function AboutContent() {
               </div>
               <div className="bg-card p-6 rounded-xl shadow-sm border flex items-center justify-center h-32">
                 <Image
-                  src="/nirmaan.png?height=80&width=160&text=CFI"
-                  alt="nirmaan Logo"
+                  src="/nirmaan.png?height=80&width=160&text=Nirmaan"
+                  alt="Nirmaan Pre-Incubator Logo"
                   width={160}
                   height={80}
                   className="max-h-16 w-auto"
@@ -123,7 +150,7 @@ export default function AboutContent() {
               <div className="bg-card p-6 rounded-xl shadow-sm border flex items-center justify-center h-32">
                 <Image
                   src="/aws-st.png?height=80&width=360&text=EdTech+Alliance"
-                  alt="AWS Startup Logo"
+                  alt="AWS EdTech Startup Program"
                   width={160}
                   height={80}
                   className="max-h-16 w-auto"
@@ -131,8 +158,8 @@ export default function AboutContent() {
               </div>
               <div className="bg-card p-6 rounded-xl shadow-sm border flex items-center justify-center h-32">
                 <Image
-                  src="/cfi.jpeg?height=80&width=160&text=AI+Research"
-                  alt="CFI Logo"
+                  src="/cfi.jpeg?height=80&width=160&text=CFI"
+                  alt="Center for Innovation Logo"
                   width={160}
                   height={80}
                   className="max-h-16 w-auto"
