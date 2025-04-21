@@ -5,25 +5,41 @@ import Image from "next/image"
 import { ScrollReveal } from "@/components/animations/scroll-reveal"
 import { TiltCard } from "@/components/ui/tilt-card"
 import { Button } from "@/components/ui/button"
+import Head from 'next/head' // Import Head from next/head
 
 export default function AboutContent() {
   const team = [
     {
       name: "Sagar Gujrati",
       role: "Co-Founder & CEO",
-      bio: "Former educator with 10+ years experience in EdTech innovation.",
-      image: "/sagar.jpeg?height=400&width=400&text=Alex",
+      bio: "A visionary leader passionate about revolutionizing education through technology and driving the development of impactful, AI-driven solutions for school safety and student empowerment.",
+      image: "/sagar.jpeg?height=400&width=400&text=Sagar",
     },
     {
       name: "Ayush Ranjan",
       role: "Co-Founder & CTO",
-      bio: "AI researcher with a passion for applying technology to education.",
-      image: "/ayush.jpeg?height=400&width=400&text=Priya",
+      bio: "AI enthusiast dedicated to transforming education by developing innovative, AI-powered solutions for safer and smarter learning experiences.",
+      image: "/ayush.jpeg?height=400&width=400&text=Ayush",
     },
   ]
 
   return (
     <div className="pt-16">
+      {/* Adding meta tags for SEO */}
+      <Head>
+        <title>About SlateMate</title>
+        <meta name="description" content="SlateMate is transforming education through AI-powered safety, personalized learning, and innovative technology. Meet our passionate team and learn about our mission." />
+        <meta name="keywords" content="SlateMate, AI in education, personalized learning, student safety, edtech, technology for education, innovative learning solutions" />
+        <meta property="og:title" content="About SlateMate" />
+        <meta property="og:description" content="SlateMate is transforming education through AI-powered safety, personalized learning, and innovative technology. Meet our passionate team and learn about our mission." />
+        <meta property="og:image" content="/mission.jpeg?text=Our+Mission&fontsize=24&bg=1E2A38&fg=FFFFFF" />
+        <meta property="og:url" content="https://slatemate.in/about" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About SlateMate" />
+        <meta name="twitter:description" content="SlateMate is transforming education through AI-powered safety, personalized learning, and innovative technology. Meet our passionate team and learn about our mission." />
+        <meta name="twitter:image" content="/mission.jpeg?text=Our+Mission&fontsize=24&bg=1E2A38&fg=FFFFFF" />
+      </Head>
+
       {/* Hero */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-electric/20 to-emerald/20">
         <div className="container mx-auto px-4">
@@ -140,7 +156,7 @@ export default function AboutContent() {
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center max-w-3xl mx-auto">
-          {team.map((member, index) => (
+            {team.map((member, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <TiltCard className="h-full" glareEnabled={true}>
                   <div className="aspect-square relative">
