@@ -136,7 +136,7 @@ export function PilotForm({ triggerButton }: { triggerButton: React.ReactNode })
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="phone">Phone Number (optional)</Label>
+            <Label htmlFor="phone">Phone Number</Label>
             <Input
               id="phone"
               name="phone"
@@ -181,10 +181,10 @@ export function PilotForm({ triggerButton }: { triggerButton: React.ReactNode })
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="1-3">1-3 students</SelectItem>
-                <SelectItem value="4-10">4-10 students</SelectItem>
-                <SelectItem value="11-30">11-30 students</SelectItem>
-                <SelectItem value="31-100">31-100 students</SelectItem>
-                <SelectItem value="100+">More than 100 students</SelectItem>
+                <SelectItem value="4-10">4-50 students</SelectItem>
+                <SelectItem value="11-30">50-500 students</SelectItem>
+                <SelectItem value="31-100">500-1500 students</SelectItem>
+                <SelectItem value="100+">More than 1500 students</SelectItem>
               </SelectContent>
             </Select>
           </div>
