@@ -11,6 +11,57 @@ export const metadata: Metadata = {
   title: "SlateMate | AI-Powered Learning Platform",
   description:
     "Empower your child's education with cutting-edge AI technology while maintaining complete control over their learning environment.",
+  keywords: [
+    "SlateMate",
+    "AI-powered education",
+    "parental control app",
+    "student learning analytics",
+    "digital education India",
+    "adaptive learning",
+    "EdTech India",
+    "AI school platform",
+    "student safety tools"
+  ],
+  openGraph: {
+    title: "SlateMate | AI-Powered Learning Platform",
+    description:
+      "SlateMate empowers education with AI-driven learning tools and real-time parent controls, creating a safe and personalized environment for students.",
+    url: "https://www.slatemate.in",
+    siteName: "SlateMate",
+    type: "website",
+    images: [
+      {
+        url: "https://www.slatemate.in/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "SlateMate AI Learning",
+      },
+    ],
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SlateMate | AI-Powered Learning Platform",
+    description:
+      "Join thousands of families using SlateMate to create personalized, AI-powered learning experiences with complete safety and parental oversight.",
+    images: ["https://www.slatemate.in/twitter-image.png"],
+    site: "@slatemate_in",
+    creator: "@slatemate_in",
+  },
+  alternates: {
+    canonical: "https://www.slatemate.in",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  metadataBase: new URL("https://www.slatemate.in"),
+  creator: "SlateMate Team",
+  publisher: "SlateMate",
+  category: "education",
+  language: "en",
+  themeColor: "#1E2A38",
+  viewport: "width=device-width, initial-scale=1",
 }
 
 export default function Home() {
