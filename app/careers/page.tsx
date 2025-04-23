@@ -49,29 +49,30 @@ export default function Careers() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "JobPosting",
-    title: "AI/ML Engineer",
-    description:
+    "title": "AI/ML Engineer",
+    "description":
       "We're looking for an AI/ML Engineer to help develop and improve our learning algorithms. You'll work on creating personalized learning experiences using state-of-the-art AI models.",
-    datePosted: new Date().toISOString(),
-    employmentType: "FULL_TIME",
-    hiringOrganization: {
+    "datePosted": new Date().toISOString(),
+    "validThrough": "2025-05-15T23:59",
+    "employmentType": "FULL_TIME",
+    "hiringOrganization": {
       "@type": "Organization",
-      name: "SlateMate",
-      sameAs: "https://slatemate.in",
-      logo: "https://slatemate.in/logo.png",
+      "name": "SlateMate",
+      "sameAs": "https://slatemate.in",
+      "logo": "https://slatemate.in/logo.png",
     },
-    jobLocation: {
+    "jobLocation": {
       "@type": "Place",
-      address: {
+      "address": {
         "@type": "PostalAddress",
-        addressCountry: "IN",
+        "addressCountry": "IN",
       },
     },
-    applicantLocationRequirements: {
+    "applicantLocationRequirements": {
       "@type": "Country",
-      name: "India",
+      "name": "India",
     },
-    jobLocationType: "TELECOMMUTE",
+    "jobLocationType": "TELECOMMUTE"
   }
 
   return (
