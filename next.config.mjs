@@ -13,7 +13,7 @@ try {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
+  output: 'standalone', // <-- Comma added here
   eslint: {
     ignoreDuringBuilds: true,
   },
