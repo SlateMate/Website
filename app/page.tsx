@@ -183,7 +183,7 @@ export default function Home() {
             {[
               { prefix: "", value: "NA", suffix: "%", label: "Student Retention" },
               { prefix: "", value: "NA", suffix: "+", label: "Trusted Parents" },
-              { prefix: "", value: "NA", suffix: "M+", label: "AI Recommendations" },
+              { prefix: "", value: "NA", suffix: "+", label: "AI Recommendations" },
               { prefix: "", value: "NA", suffix: "+", label: "Partner Schools" },
             ].map((stat, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
