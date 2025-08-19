@@ -181,10 +181,10 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { prefix: "", value: 95, suffix: "%", label: "Student Retention" },
-              { prefix: "", value: 5000, suffix: "+", label: "Trusted Parents" },
-              { prefix: "", value: 1, suffix: "M+", label: "AI Recommendations" },
-              { prefix: "", value: 32, suffix: "+", label: "Partner Schools" },
+              { prefix: "", value: "NA", suffix: "%", label: "Student Retention" },
+              { prefix: "", value: "NA", suffix: "+", label: "Trusted Parents" },
+              { prefix: "", value: "NA", suffix: "M+", label: "AI Recommendations" },
+              { prefix: "", value: "NA", suffix: "+", label: "Partner Schools" },
             ].map((stat, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className="text-center p-6 bg-card rounded-xl shadow-sm border">
