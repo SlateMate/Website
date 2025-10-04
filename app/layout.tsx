@@ -152,12 +152,6 @@ export default function RootLayout({
                   jobTitle: "CTO & Co-founder",
                   url: "https://www.linkedin.com/in/ayushranjan636",
                 },
-                {
-                  "@type": "Person",
-                  name: "Sagar Gujrati",
-                  jobTitle: "CEO & Co-founder",
-                  url: "https://www.linkedin.com/in/sagar-gujrati-a30822293/",
-                },
               ],
               description:
                 "SlateMate is a next-generation educational platform focused on child safety, AI-powered parental control, and academic growth tracking in India.",
