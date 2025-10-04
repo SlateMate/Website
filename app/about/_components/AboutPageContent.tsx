@@ -10,14 +10,8 @@ import Head from "next/head"
 export default function AboutContent() {
   const team = [
     {
-      name: "Sagar Gujrati",
-      role: "Co-Founder & CEO",
-      bio: "A visionary leader passionate about revolutionizing education through technology and driving the development of impactful, AI-driven solutions for school safety and student empowerment.",
-      image: "/sagar.jpeg?height=400&width=400&text=Sagar",
-    },
-    {
       name: "Ayush Ranjan",
-      role: "Co-Founder & CTO",
+      role: "Co-Founder & CEO",
       bio: "AI enthusiast dedicated to transforming education by developing innovative, AI-powered solutions for safer and smarter learning experiences.",
       image: "/ayush.jpeg?height=400&width=400&text=Ayush",
     },
