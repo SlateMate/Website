@@ -17,44 +17,44 @@ import {
 const FeaturePageContent = () => {
   const features = [
     {
-      title: "AI-Powered Learning",
+      title: "DNS Protection Layer",
       description:
-        "Our proprietary AI analyzes learning patterns to create personalized educational pathways for each student, adapting content difficulty and style based on individual progress.",
-      icon: LucideBrain,
+        "Advanced DNS filtering blocks pornography, scams, violence, and malware across all devices. Context-aware interventions warn, blur, block, and suggest safe alternatives automatically.",
+      icon: LucideShield,
       color: "bg-electric",
     },
     {
-      title: "Parent Controls",
+      title: "AI Child Companion",
       description:
-        "Take control with robust parental oversight tools that let you monitor activity, set limits, filter content, and receive real-time notifications about your child's learning journey.",
-      icon: LucideShield,
+        "Friendly AI companion explains blocked content in kid-friendly terms, provides emotional check-ins, study support, and builds positive digital habits through gamification.",
+      icon: LucideBrain,
       color: "bg-emerald",
     },
     {
-      title: "Social Learning",
+      title: "Parent Dashboard",
       description:
-        "Foster collaboration through moderated learning communities where students can work together on projects, discuss concepts, and receive peer feedback in a safe environment.",
-      icon: LucideUsers,
-      color: "bg-golden",
-    },
-    {
-      title: "Progress Analytics",
-      description:
-        "Access comprehensive dashboards with visual representations of performance data, showing strengths, weaknesses, and growth over time through intuitive charts and reports.",
+        "Comprehensive insights with Safety Score, Focus Score, and Emotional Balance Index. Real-time monitoring and family digital health guidance to support your child's growth.",
       icon: LucideBarChart,
       color: "bg-electric",
     },
     {
-      title: "Data Privacy",
+      title: "Privacy-First Design",
       description:
-        "Rest assured with our commitment to student data protection, employing end-to-end encryption, strict access controls, and transparent data policies that exceed industry standards.",
+        "Zero ads, no data selling, end-to-end encryption for maximum family trust. Your child's data stays private and secure with industry-leading protection standards.",
       icon: LucideLock,
       color: "bg-emerald",
     },
     {
-      title: "Goal Setting",
+      title: "Safe Social Learning",
       description:
-        "Empower students with tools to set, track, and achieve learning objectives with customizable goals, milestone tracking, and achievement celebrations that build motivation.",
+        "Moderated, private community where children learn, collaborate, and grow safely. Age-appropriate interactions with built-in safety controls and expert supervision.",
+      icon: LucideUsers,
+      color: "bg-golden",
+    },
+    {
+      title: "School & NGO Integration",
+      description:
+        "Scalable B2B2C model empowering educational institutions to protect children at scale. Bulk licensing and custom deployment for schools and organizations.",
       icon: LucideTarget,
       color: "bg-golden",
     },
@@ -63,24 +63,24 @@ const FeaturePageContent = () => {
   return (
     <div className="pt-16">
       <Head>
-  <title>Features | SlateMate - AI-Powered Learning & Parental Controls</title>
+  <title>eRaksha Features | AI Digital Guardian & Child Safety Tools</title>
   <meta
     name="description"
-    content="Explore SlateMate's intelligent features for safe and personalized student learning — from AI-powered learning paths to parent dashboards and data privacy tools."
+    content="Explore eRaksha's comprehensive child safety features — DNS protection, AI companion, parent dashboard, privacy-first design, and safe social learning for complete family digital wellness."
   />
   <meta
     name="keywords"
-    content="SlateMate Features, AI education, parental control app, student monitoring, digital learning tools, AI school management, adaptive learning, EdTech safety"
+    content="eRaksha Features, AI child companion, DNS protection children, digital safety dashboard, child online protection, AI safety mentor, family digital health, safe social learning"
   />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="SlateMate Team" />
   <meta name="language" content="en" />
 
   {/* Open Graph */}
-  <meta property="og:title" content="Features | SlateMate" />
+  <meta property="og:title" content="eRaksha Features | AI Digital Guardian" />
   <meta
     property="og:description"
-    content="Explore SlateMate's powerful AI and safety features including parental controls, adaptive learning, and analytics dashboards."
+    content="Comprehensive digital safety tools: DNS protection, AI mentoring, habit building, and privacy-first family security platform."
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.slatemate.in/features" />
@@ -90,10 +90,10 @@ const FeaturePageContent = () => {
 
   {/* Twitter */}
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="SlateMate Features" />
+  <meta name="twitter:title" content="eRaksha Features | AI Child Protection" />
   <meta
     name="twitter:description"
-    content="AI-powered school management and parental control tools in one platform."
+    content="DNS protection, AI mentoring, habit building, and privacy-first digital safety for children and families."
   />
   <meta name="twitter:image" content="https://www.slatemate.in/twitter-image.png" />
   <meta name="twitter:site" content="@slatemate_in" />
@@ -108,10 +108,11 @@ const FeaturePageContent = () => {
             transition={{ duration: 0.5 }}
             className="max-w-3xl mx-auto text-center"
           >
-            <h1 className="text-4xl font-bold mb-6">Powerful Features for Modern Learning</h1>
+            <h1 className="text-4xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-electric to-emerald bg-clip-text text-transparent">eRaksha</span> Features
+            </h1>
             <p className="text-xl mb-8 text-foreground/80">
-              Discover how SlateMate's innovative features create an engaging, safe, and effective educational
-              experience.
+              Comprehensive digital safety features that protect, guide, and inspire children to build positive digital habits.
             </p>
           </motion.div>
         </div>
@@ -143,9 +144,9 @@ const FeaturePageContent = () => {
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center mb-16">
-              <h2 className="text-3xl font-bold mb-6">See SlateMate in Action</h2>
+              <h2 className="text-3xl font-bold mb-6">See eRaksha in Action</h2>
               <p className="text-lg text-foreground/80">
-                Experience how our features work together to create a seamless learning environment.
+                Experience how our features work together to create a safer, smarter digital environment for children.
               </p>
             </div>
           </ScrollReveal>
@@ -163,8 +164,8 @@ const FeaturePageContent = () => {
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center mb-16">
-              <h2 className="text-3xl font-bold mb-6">Why Choose SlateMate?</h2>
-              <p className="text-lg text-foreground/80">See how we compare to traditional learning platforms.</p>
+              <h2 className="text-3xl font-bold mb-6">Why Choose eRaksha?</h2>
+              <p className="text-lg text-foreground/80">See how we compare to traditional parental control solutions.</p>
             </div>
           </ScrollReveal>
 
@@ -174,18 +175,18 @@ const FeaturePageContent = () => {
                 <thead>
                   <tr>
                     <th className="p-4 text-left bg-muted">Features</th>
-                    <th className="p-4 text-center bg-muted">SlateMate</th>
-                    <th className="p-4 text-center bg-muted">Traditional Platforms</th>
+                    <th className="p-4 text-center bg-muted">eRaksha</th>
+                    <th className="p-4 text-center bg-muted">Traditional Parental Controls</th>
                   </tr>
                 </thead>
                 <tbody>
                   {[
-                    { feature: "AI-Powered Personalization", slatemate: true, traditional: false },
-                    { feature: "Real-time Parent Controls", slatemate: true, traditional: false },
-                    { feature: "Adaptive Learning Paths", slatemate: true, traditional: false },
-                    { feature: "Social Learning Tools", slatemate: true, traditional: true },
-                    { feature: "Advanced Analytics", slatemate: true, traditional: false },
-                    { feature: "Data Privacy", slatemate: true, traditional: true },
+                    { feature: "AI Child Companion", slatemate: true, traditional: false },
+                    { feature: "DNS Protection Layer", slatemate: true, traditional: false },
+                    { feature: "Emotional Balance Monitoring", slatemate: true, traditional: false },
+                    { feature: "Positive Habit Building", slatemate: true, traditional: false },
+                    { feature: "Context-Aware Blocking", slatemate: true, traditional: false },
+                    { feature: "Privacy-First Design (No Ads)", slatemate: true, traditional: false },
                   ].map((row, index) => (
                     <tr key={index} className="border-b">
                       <td className="p-4">{row.feature}</td>

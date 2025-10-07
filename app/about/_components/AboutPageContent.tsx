@@ -11,9 +11,52 @@ export default function AboutContent() {
   const team = [
     {
       name: "Ayush Ranjan",
-      role: "Co-Founder & CEO",
-      bio: "AI enthusiast dedicated to transforming education by developing innovative, AI-powered solutions for safer and smarter learning experiences.",
-      image: "/ayush.jpeg?height=400&width=400&text=Ayush",
+      role: "CEO & Co Founder",
+      bio: "AI enthusiast dedicated to transforming digital safety by developing innovative, AI-powered solutions for safer and smarter online experiences for children.",
+      image: "/ayush.jpg",
+    },
+    {
+      name: "Manan Soni",
+      role: "CTO & Co Founder",
+      bio: "Technology visionary focused on building scalable AI systems and robust infrastructure for child digital safety and family digital wellness.",
+      image: "/unnamed-10.jpg",
+    },
+    {
+      name: "Drushti Surkar",
+      role: "Market Analyst - Founding Member",
+      bio: "Strategic market research expert specializing in EdTech and digital safety markets, driving data-driven decisions for product growth.",
+      image: "/unnamed-2.jpg",
+    },
+    {
+      name: "Vishnu Chandra",
+      role: "UI Designer Expert - Founding Member",
+      bio: "Creative design leader crafting intuitive and child-friendly interfaces that make digital safety accessible and engaging for families.",
+      image: "/unnamed-3.jpg",
+    },
+    {
+      name: "Tanisha Agarwal",
+      role: "Developer",
+      bio: "Full-stack developer building robust and scalable solutions for eRaksha's digital safety platform with focus on performance and user experience.",
+      image: "/unnamed-4.jpg",
+    },
+    {
+      name: "Sanjay Kuppusamy Saravanan",
+      role: "Founding Member",
+      bio: "AI/ML specialist developing intelligent algorithms for content filtering, behavioral analysis, and the AI companion features that make eRaksha unique.",
+      image: "/unnamed-6.jpg",
+    },
+    {
+      name: "Riheb Zaidi",
+      role: "Founding Member",
+      bio: "Software developer focused on building secure, reliable, and child-friendly interfaces that make digital safety accessible for families.",
+      image: "/unnamed-7.jpg",
+    },
+
+    {
+      name: "Ekta Chopra",
+      role: "Founding Member",
+      bio: "Executive leadership coordinator streamlining operations and strategic planning to accelerate SlateMate's mission of child digital safety.",
+      image: "/unnamed.jpg",
     },
   ]
 
@@ -168,29 +211,66 @@ export default function AboutContent() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <ScrollReveal>
-            <div className="max-w-3xl mx-auto text-center mb-16">
+            <div className="max-w-4xl mx-auto text-center mb-16">
               <h2 className="text-3xl font-bold mb-6">Meet Our Team</h2>
               <p className="text-lg text-foreground/80">
-                Passionate educators, technologists, and designers working together to transform the future of learning.
+                Passionate technologists, designers, and safety experts working together to create safer digital experiences for children and families worldwide.
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center max-w-3xl mx-auto">
-            {team.map((member, index) => (
-              <ScrollReveal key={index} delay={index * 0.1}>
-                <TiltCard className="h-full" glareEnabled={true}>
-                  <div className="aspect-square relative">
-                    <Image src={member.image || "/placeholder.svg"} alt={member.name} fill className="object-cover" />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold">{member.name}</h3>
-                    <p className="text-electric font-medium mb-2">{member.role}</p>
-                    <p className="text-foreground/80">{member.bio}</p>
-                  </div>
-                </TiltCard>
-              </ScrollReveal>
-            ))}
+          {/* Co-Founders Section */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-center mb-8">Co-Founders</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+              {team.slice(0, 2).map((member, index) => (
+                <ScrollReveal key={index} delay={index * 0.1}>
+                  <TiltCard className="h-full" glareEnabled={true}>
+                    <div className="aspect-square relative">
+                      <Image 
+                        src={member.image || "/placeholder.svg"} 
+                        alt={member.name} 
+                        fill 
+                        className="object-cover object-center rounded-t-lg" 
+                        style={{ objectPosition: 'center' }}
+                      />
+                    </div>
+                    <div className="p-8">
+                      <h4 className="text-2xl font-bold">{member.name}</h4>
+                      <p className="text-electric font-semibold mb-3 text-lg">{member.role}</p>
+                      <p className="text-foreground/80 leading-relaxed">{member.bio}</p>
+                    </div>
+                  </TiltCard>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+
+          {/* Other Team Members */}
+          <div>
+            <h3 className="text-2xl font-bold text-center mb-8">Our Team</h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {team.slice(2).map((member, index) => (
+                <ScrollReveal key={index + 2} delay={(index + 2) * 0.1}>
+                  <TiltCard className="h-full" glareEnabled={true}>
+                    <div className="aspect-square relative">
+                      <Image 
+                        src={member.image || "/placeholder.svg"} 
+                        alt={member.name} 
+                        fill 
+                        className="object-cover object-center rounded-t-lg" 
+                        style={{ objectPosition: 'center' }}
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h4 className="text-base font-bold">{member.name}</h4>
+                      <p className="text-electric font-medium mb-2 text-sm">{member.role}</p>
+                      <p className="text-foreground/80 text-xs leading-relaxed">{member.bio}</p>
+                    </div>
+                  </TiltCard>
+                </ScrollReveal>
+              ))}
+            </div>
           </div>
         </div>
       </section>

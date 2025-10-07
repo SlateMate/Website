@@ -17,18 +17,10 @@ type NavItem = {
 
 const navItems: NavItem[] = [
   { title: "Home", href: "/" },
-  {
-    title: "Product",
-    href: "/product",
-    children: [
-      { title: "For Schools", href: "/product#schools" },
-      { title: "For Parents", href: "/product#parents" },
-      { title: "AI Features", href: "/product#ai-features" },
-    ],
-  },
+  { title: "eRaksha", href: "/product" },
   { title: "Features", href: "/features" },
   { title: "Pricing", href: "/pricing" },
-  { title: "About Us", href: "/about" },
+  { title: "About", href: "/about" },
 ]
 
 export function Navbar() {
