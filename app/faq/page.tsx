@@ -2,11 +2,11 @@ import { Metadata } from "next"
 import Head from "next/head"
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions | SlateMate - AI-Powered Learning Platform",
+  title: "eRaksha FAQ 2024 | Child Safety Platform Questions India | AI Digital Protection Answers | SlateMate Support",
   description:
-    "Find answers to common questions about SlateMate's AI-powered learning platform. Learn about features, pricing, safety measures, and how our personalized learning system works.",
+    "Complete FAQ for eRaksha child safety platform. Get answers about AI companion features, DNS protection, pricing, privacy, installation, and family digital safety. Expert answers for Indian parents about comprehensive child online protection.",
   keywords:
-    "SlateMate FAQ, AI learning platform questions, educational technology FAQ, personalized learning questions, student safety FAQ, AI EdTech support, online education safety",
+    "eRaksha FAQ India 2024, child safety platform questions, AI digital protection answers, family internet safety FAQ, parental control questions India, DNS protection children FAQ, digital wellness platform support, child online safety answers, AI companion questions, family cybersecurity FAQ, screen time management questions, digital parenting support India, child privacy protection FAQ, online safety education answers, family digital health questions, child internet monitoring FAQ, digital habits guidance questions, AI child psychology support FAQ, cyber safety children answers, digital citizenship education FAQ, child screen addiction help questions, family technology balance FAQ, child emotional AI support answers, digital detox family questions, safe internet browsing FAQ, child development platform questions, digital mindfulness children FAQ, family communication platform support, child online behavior FAQ, AI safety mentor questions, digital guardian platform FAQ, child data privacy questions India, family digital literacy support, safe social media children FAQ, educational technology safety questions, child cyberbullying prevention FAQ, digital child protection answers, AI powered parenting FAQ, family internet filter questions, child online identity protection FAQ, digital wellness dashboard support, AI child guidance platform FAQ",
   openGraph: {
     title: "Frequently Asked Questions | SlateMate - AI-Powered Learning Platform",
     description:
@@ -41,7 +41,25 @@ export const metadata: Metadata = {
   creator: "SlateMate Team",
   publisher: "SlateMate",
   category: "education",
-  language: "en",
+  other: {
+    // LLM Optimization for FAQ Page
+    "ai-content-type": "faq-support-page",
+    "ai-primary-entities": "eRaksha-FAQ,child-safety-questions,AI-companion-answers,support-documentation",
+    "ai-content-topics": "frequently asked questions, child safety support, AI companion guidance, technical help, platform assistance",
+    "ai-extraction-hints": "content: Q&A format; purpose: user support; topics: child safety, AI features, pricing, technical issues",
+    "llm-context-type": "question-answer-database",
+    "llm-primary-intent": "provide comprehensive answers to user questions, reduce support burden",
+    "llm-key-messages": "comprehensive support, expert answers, user-friendly guidance, technical assistance available",
+    "semantic-entities": "document:FAQ, concept:questions-answers, product:eRaksha, support:customer-service",
+    "relationship-mapping": "users:ask:questions, FAQ:provides:answers, support:helps:users, eRaksha:addresses:concerns",
+    "content-structure": "question-categories, detailed-answers, technical-explanations, troubleshooting-guides",
+    "stakeholder-relevance": "users:problem-solving, parents:safety-concerns, technical-users:implementation-details",
+    "question-categories": "Safety Features, Pricing, Technical Setup, Privacy, AI Companion, Family Use",
+    "geo.region": "IN",
+    "audience": "Parents, Families, Technical Users, Potential Customers",
+    "page-topic": "eRaksha Frequently Asked Questions and Support",
+    "support-level": "Comprehensive FAQ Database"
+  },
 }
 
 export default function FAQ() {

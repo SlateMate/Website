@@ -17,27 +17,54 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: "SlateMate | AI-Powered Digital Safety Platform",
-    template: "%s | SlateMate",
+    default: "SlateMate eRaksha | India's Leading AI Child Safety Platform 2024 | Digital Protection for Families",
+    template: "%s | SlateMate eRaksha - AI Child Safety India",
   },
   description:
-    "eRaksha - Your child's AI-powered digital guardian. DNS protection, safe browsing, emotional support, and positive habit building. Privacy-first family digital safety platform.",
+    "eRaksha by SlateMate - India's most trusted AI-powered child digital guardian. Advanced DNS protection, intelligent companion, emotional support, and positive habit building. Privacy-first family digital safety platform from IIT Madras for Indian families.",
   metadataBase: new URL("https://www.slatemate.in"),
   keywords: [
-    "eRaksha",
-    "SlateMate",
-    "child online safety",
-    "digital protection kids",
-    "AI child companion",
-    "DNS protection",
-    "parental control India",
-    "online safety platform",
-    "digital habits children",
-    "family digital health",
-    "AI safety mentor",
-    "child internet guardian",
-    "safe browsing kids",
-    "digital wellness family"
+    "eRaksha India 2024",
+    "SlateMate child safety platform",
+    "child online safety India",
+    "digital protection kids India",
+    "AI child companion India",
+    "DNS protection children",
+    "parental control India best",
+    "online safety platform Indian families",
+    "digital habits children guidance",
+    "family digital health India",
+    "AI safety mentor children",
+    "child internet guardian India",
+    "safe browsing kids platform",
+    "digital wellness family India",
+    "IIT Madras child safety startup",
+    "Chennai child protection technology",
+    "Indian EdTech child safety",
+    "Swadeshi child digital protection",
+    "Made in India child safety",
+    "Tamil Nadu startup child safety",
+    "child cybersecurity India",
+    "digital parenting India",
+    "family internet safety India",
+    "child screen time management",
+    "digital citizenship education India",
+    "child emotional AI support",
+    "family cybersecurity platform",
+    "child online behavior monitoring",
+    "digital child psychology India",
+    "AI powered parental guidance",
+    "child data privacy India",
+    "family digital literacy",
+    "child internet addiction prevention",
+    "digital mindfulness children India",
+    "safe social media children",
+    "child online identity protection",
+    "family technology balance India",
+    "child development digital platform",
+    "AI child emotional intelligence",
+    "digital detox families India",
+    "child cyberbullying prevention AI"
   ],
   openGraph: {
     siteName: "SlateMate",
@@ -95,8 +122,42 @@ export const metadata: Metadata = {
   publisher: "SlateMate",
   category: "education",
   themeColor: "#1E2A38",
-  viewport: "width=device-width, initial-scale=1",
-  language: "en-IN",
+  other: {
+    // Global LLM Optimization
+    "ai-website-type": "child-safety-platform",
+    "ai-primary-business": "SlateMate Technologies - eRaksha child digital safety",
+    "ai-target-audience": "Indian families, parents, children, educators",
+    "ai-core-offering": "AI-powered child online safety and digital wellness platform",
+    "ai-geographic-focus": "India, Chennai, Tamil Nadu, IIT Madras ecosystem",
+    "ai-business-model": "SaaS child safety platform with AI companion technology",
+    "ai-key-differentiators": "AI companion, privacy-first, Indian innovation, IIT Madras incubated",
+    "llm-website-purpose": "showcase eRaksha platform, convert families to users, build trust",
+    "llm-content-strategy": "educational, safety-focused, family-friendly, technically robust",
+    "semantic-website-structure": "homepage, product, about, pricing, features, support",
+    "business-classification": "B2C EdTech, Child Safety, Family Technology",
+    "innovation-focus": "Artificial Intelligence, Child Psychology, Digital Safety",
+    "geographic-targeting": "India-first with global expansion potential",
+    // Technical SEO
+    "google-site-verification": "to-be-configured",
+    "msvalidate.01": "to-be-configured", 
+    "yandex-verification": "to-be-configured",
+    "format-detection": "telephone=no, address=no, email=no",
+    "mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-status-bar-style": "default",
+    "apple-mobile-web-app-title": "eRaksha Safety",
+    "msapplication-TileColor": "#1E2A38",
+    "msapplication-tooltip": "eRaksha - Child Digital Safety",
+    "theme-color": "#1E2A38",
+    "color-scheme": "light dark",
+    "language": "en-IN",
+    "content-language": "en-IN",
+    "geo.region": "IN",
+    "geo.country": "India",
+    "distribution": "global",
+    "rating": "general",
+    "audience": "Parents, Families, Educators, Children"
+  },
 }
 
 export default function RootLayout({
@@ -105,12 +166,98 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" dir="ltr" suppressHydrationWarning>
+    <html 
+      lang="en-IN" 
+      dir="ltr" 
+      suppressHydrationWarning
+      data-llm-website="slatemate-eraksha"
+      data-llm-business-type="child-safety-platform"
+      itemScope
+      itemType="https://schema.org/WebSite"
+    >
       <head>
         <meta charSet="utf-8" />
         <meta name="theme-color" content="#1E2A38" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>SlateMate | AI for Safer Digital Learning</title>
+        
+        {/* Global Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": ["WebSite", "Corporation"],
+                  "@id": "https://www.slatemate.in#website",
+                  "name": "SlateMate eRaksha",
+                  "alternateName": "SlateMate",
+                  "url": "https://www.slatemate.in",
+                  "description": "India's leading AI-powered child digital safety platform",
+                  "inLanguage": "en-IN",
+                  "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://www.slatemate.in/search?q={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                  },
+                  "publisher": {
+                    "@type": "Organization",
+                    "@id": "https://www.slatemate.in#organization"
+                  }
+                },
+                {
+                  "@type": "Organization",
+                  "@id": "https://www.slatemate.in#organization",
+                  "name": "SlateMate Technologies Pvt Ltd",
+                  "alternateName": "SlateMate",
+                  "legalName": "SlateMate Technologies Private Limited",
+                  "url": "https://www.slatemate.in",
+                  "logo": "https://www.slatemate.in/logo.png",
+                  "description": "Revolutionary AI child safety platform from IIT Madras",
+                  "foundingDate": "2023",
+                  "foundingLocation": "Chennai, Tamil Nadu, India",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "1st Floor Nirmaan, Sudha & Shankar Innovation Hub, IIT Madras",
+                    "addressLocality": "Chennai",
+                    "addressRegion": "Tamil Nadu",
+                    "postalCode": "600036",
+                    "addressCountry": "IN"
+                  },
+                  "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+91-90258-67204",
+                    "contactType": "customer service",
+                    "email": "support@slatemate.in",
+                    "availableLanguage": ["English", "Hindi"]
+                  },
+                  "sameAs": [
+                    "https://twitter.com/slatemate_in",
+                    "https://linkedin.com/company/slatemate",
+                    "https://facebook.com/slatemate",
+                    "https://instagram.com/slatemate.in"
+                  ],
+                  "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "eRaksha Child Safety Services",
+                    "itemListElement": [
+                      {
+                        "@type": "Offer",
+                        "itemOffered": {
+                          "@type": "SoftwareApplication",
+                          "name": "eRaksha AI Child Safety Platform",
+                          "applicationCategory": "Child Safety Software",
+                          "operatingSystem": "Cross-platform"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            })
+          }}
+        />
 
         {/* Google Tag Manager */}
         <script
@@ -170,7 +317,6 @@ export default function RootLayout({
 
       <body
         className={`${poppins.variable} font-sans bg-background text-foreground antialiased`}
-        suppressHydrationWarning
       >
         {/* Google Tag Manager (noscript) */}
         <noscript>

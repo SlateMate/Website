@@ -175,8 +175,8 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4">Contact</h3>
             <ul className="space-y-3">
-              <li className="flex items-center">
-                <Mail className="h-5 w-5 mr-2 text-electric" />
+              <li className="flex items-start">
+                <Mail className="h-5 w-5 mr-2 text-electric mt-0.5" />
                 <a
                   href="mailto:info@slatemate.in"
                   className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
@@ -184,14 +184,25 @@ export function Footer() {
                   info@slatemate.in
                 </a>
               </li>
-              <li className="flex items-center">
-                <Phone className="h-5 w-5 mr-2 text-electric" />
+              <li className="flex items-start">
+                <Phone className="h-5 w-5 mr-2 text-electric mt-0.5" />
                 <a
                   href="tel:+919025867204"
                   className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
                 >
                   +91 90258 67204
                 </a>
+              </li>
+              <li className="flex items-start">
+                <div className="h-5 w-5 mr-2 text-electric mt-0.5 flex items-center justify-center">
+                  <span className="text-xs">📍</span>
+                </div>
+                <div className="text-primary-foreground/70 text-sm leading-relaxed">
+                  1st Floor, Nirmaan<br />
+                  Sudha & Shankar Innovation Hub<br />
+                  Indian Institute of Technology Madras<br />
+                  Chennai - 600036, India
+                </div>
               </li>
               <div className="mt-6 pt-6 border-t border-primary-foreground/10">
                 <h4 className="text-sm font-semibold mb-3">Join our waitlist</h4>

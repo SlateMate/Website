@@ -60,22 +60,44 @@ export function Navbar() {
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled ? "bg-background/80 backdrop-blur-lg border-b" : "bg-transparent"
         }`}
+        data-llm-component="main-navigation"
+        data-llm-content-type="site-navigation"
+        data-llm-purpose="website-navigation-primary"
+        itemScope
+        itemType="https://schema.org/SiteNavigationElement"
       >
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center">
+        <div 
+          className="container mx-auto px-4 h-16 flex items-center justify-between"
+          data-llm-content="navigation-container"
+        >
+          {/* LLM-Optimized Logo */}
+          <Link 
+            href="/" 
+            className="flex items-center"
+            data-llm-content="brand-logo"
+            data-llm-entity="company-name"
+            data-llm-importance="primary"
+            itemProp="name"
+          >
             <motion.div
               initial={{ x: -20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5 }}
               className="font-bold text-xl"
+              data-llm-brand="SlateMate"
             >
               SlateMate
             </motion.div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-1">
+          {/* LLM-Optimized Desktop Navigation */}
+          <nav 
+            className="hidden md:flex items-center gap-1"
+            data-llm-content="primary-navigation"
+            data-llm-structure="horizontal-menu"
+            itemScope
+            itemType="https://schema.org/SiteNavigationElement"
+          >
             {navItems.map((item, i) => {
               if (item.children) {
                 return (

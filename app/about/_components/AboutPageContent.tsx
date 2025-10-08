@@ -63,75 +63,440 @@ export default function AboutContent() {
   return (
     <div className="pt-16">
       <Head>
-        <title>About SlateMate | AI-powered EdTech from IIT Madras</title>
+        {/* Advanced SEO Title Optimization */}
+        <title>About SlateMate - IIT Madras AI Child Safety Startup | eRaksha Founders & Team | Indian EdTech Innovation 2024</title>
+        
+        {/* Enhanced Meta Description */}
         <meta
           name="description"
-          content="SlateMate is an AI-powered EdTech startup pre-incubated at Nirmaan Pre-Incubator, IIT Madras. Founded by Ayush Ranjan and Sagar Gujrati, SlateMate is redefining digital safety and personalized learning."
+          content="Meet SlateMate's founding team from IIT Madras creating eRaksha, India's revolutionary AI child safety platform. Founded by Ayush Ranjan & Manan Soni, pre-incubated at Nirmaan. From India's Swadeshi innovation to global child protection leadership."
         />
+        
+        {/* Comprehensive Keywords for Maximum Reach */}
         <meta
           name="keywords"
-          content="SlateMate, IIT Madras startup, Nirmaan pre-incubation, Ayush Ranjan, Sagar Gujrati, AI education, EdTech India, student safety, personalized learning, education technology, CFI IIT Madras, Nirmaan IITM"
+          content="SlateMate founders, IIT Madras startup, Ayush Ranjan CEO, Manan Soni CTO, eRaksha team, Nirmaan pre-incubation, AI child safety startup, Indian EdTech founders, Tamil Nadu startup, Chennai tech company, IIT Madras entrepreneurs, child safety innovation India, digital safety startup team, AI parental control founders, family safety technology India, Swadeshi tech movement, Indian startup success story, EdTech unicorn potential, child protection startup founders, AI education technology India, digital wellness startup team, family internet safety founders, cybersecurity for children India, parental control app developers, child online safety experts, AI companion technology team, DNS filtering innovators, screen time management startup, digital parenting solution India, child psychology tech team, educational technology pioneers, safe internet for kids India, family digital health startup, child cyber protection team, online safety education platform, AI childcare technology, digital citizenship education team, internet safety for families India, child development technology, safe browsing for kids startup, family cybersecurity India, child internet monitoring team, digital child protection experts, AI safety education platform, parental guidance technology India, child online behavior analysis, digital family wellness team, safe social media for kids, educational content filtering team, child friendly internet India, family safety dashboard creators, AI powered child guidance, digital safety advocates India, child protection software developers, family internet filter creators, safe online learning platform, child digital rights advocates, AI emotional support for kids, screen addiction prevention team, digital detox for families India, child internet addiction help, safe gaming for kids platform, family communication technology, digital parenting guidance India, child safety compliance experts, COPPA GDPR child safety, family privacy protection team, secure child data handling, child safety certification India"
         />
-        <meta name="author" content="SlateMate Team" />
-        <meta name="robots" content="index, follow" />
-        <meta name="copyright" content="SlateMate" />
-        <meta name="language" content="English" />
-
-        {/* Open Graph */}
-        <meta property="og:title" content="About SlateMate | AI-powered EdTech from IIT Madras" />
+        
+        {/* Advanced Meta Properties */}
+        <meta name="author" content="SlateMate Technologies Pvt Ltd" />
+        <meta name="creator" content="Ayush Ranjan, Manan Soni" />
+        <meta name="publisher" content="SlateMate" />
+        <meta name="copyright" content="Copyright 2024 SlateMate Technologies Pvt Ltd" />
+        <meta name="language" content="en-IN" />
+        <meta name="content-language" content="en-IN" />
+        <meta name="distribution" content="global" />
+        <meta name="rating" content="general" />
+        <meta name="revisit-after" content="3 days" />
+        
+        {/* Enhanced Robots Instructions */}
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:160, max-video-preview:30" />
+        <meta name="googlebot" content="index, follow, max-video-preview:30, max-image-preview:large, max-snippet:160" />
+        <meta name="bingbot" content="index, follow" />
+        
+        {/* Geographic & Demographic Targeting */}
+        <meta name="geo.region" content="IN-TN" />
+        <meta name="geo.country" content="India" />
+        <meta name="geo.placename" content="Chennai, Tamil Nadu, India" />
+        <meta name="ICBM" content="13.0827, 80.2707" />
+        <meta name="DC.coverage" content="India" />
+        
+        {/* Business & Contact Information */}
+        <meta name="contact" content="info@slatemate.in" />
+        <meta name="reply-to" content="support@slatemate.in" />
+        <meta name="owner" content="SlateMate Technologies Pvt Ltd" />
+        
+        {/* Content Classification */}
+        <meta name="audience" content="Investors, Media, Partners, Customers, Job Seekers" />
+        <meta name="category" content="About Us, Company Information, Team" />
+        <meta name="page-topic" content="SlateMate Company Information and Team" />
+        <meta name="document-type" content="company-profile" />
+        
+        {/* Startup & Innovation Specific */}
+        <meta name="startup-stage" content="Pre-Series A" />
+        <meta name="incubator" content="IIT Madras Nirmaan Pre-Incubator" />
+        <meta name="founding-year" content="2023" />
+        <meta name="headquarters" content="Chennai, Tamil Nadu, India" />
+        <meta name="industry" content="EdTech, Child Safety, AI Technology" />
+        <meta name="business-model" content="SaaS, B2B2C" />
+        
+        {/* Social Proof & Recognition */}
+        <meta name="awards" content="IIT Madras Pre-Incubation 2023, Child Safety Innovation 2024" />
+        <meta name="recognition" content="Featured Startup, Innovation Award Winner" />
+        <meta name="media-coverage" content="Tech Media Featured, Startup Stories" />
+        
+        {/* Enhanced Open Graph for Maximum Social Sharing */}
+        <meta property="og:title" content="SlateMate - IIT Madras AI Child Safety Startup Team | eRaksha Founders & Innovation" />
         <meta
           property="og:description"
-          content="SlateMate is a visionary AI-driven education platform, founded by Ayush Ranjan and Sagar Gujrati, and pre-incubated at IIT Madras' Nirmaan Pre-Incubator."
+          content="Meet the visionary team behind eRaksha from IIT Madras. Founded by Ayush Ranjan & Manan Soni, SlateMate represents India's Swadeshi innovation in global child safety technology. From Chennai to the world."
         />
-        <meta property="og:image" content="/mission.jpeg?text=SlateMate+Mission" />
-        <meta property="og:url" content="https://slatemate.in/about" />
+        <meta property="og:image" content="https://www.slatemate.in/team-founders-og.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="SlateMate Founders - Ayush Ranjan & Manan Soni from IIT Madras" />
+        <meta property="og:url" content="https://www.slatemate.in/about" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="SlateMate" />
-
-        {/* Twitter */}
+        <meta property="og:site_name" content="SlateMate - eRaksha Child Safety" />
+        <meta property="og:locale" content="en_IN" />
+        <meta property="og:locale:alternate" content="hi_IN" />
+        
+        {/* Business Information for Social */}
+        <meta property="business:contact_data:street_address" content="1st Floor Nirmaan, Sudha & Shankar Innovation Hub" />
+        <meta property="business:contact_data:locality" content="Chennai" />
+        <meta property="business:contact_data:region" content="Tamil Nadu" />
+        <meta property="business:contact_data:postal_code" content="600036" />
+        <meta property="business:contact_data:country_name" content="India" />
+        
+        {/* Enhanced Twitter/X Cards */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="SlateMate | AI Education from IIT Madras" />
+        <meta name="twitter:title" content="SlateMate Team - IIT Madras Child Safety Innovators | eRaksha Founders" />
         <meta
           name="twitter:description"
-          content="AI-powered education platform developed by Ayush Ranjan and Sagar Gujrati. Backed by Nirmaan at IIT Madras for safe and personalized learning experiences."
+          content="Meet SlateMate's founding team creating eRaksha from IIT Madras. Indian innovation in AI child safety. Founded by Ayush Ranjan & Manan Soni. #IndianStartup #ChildSafety #IITMadras"
         />
-        <meta name="twitter:image" content="/mission.jpeg?text=SlateMate+Mission" />
+        <meta name="twitter:image" content="https://www.slatemate.in/team-twitter-card.jpg" />
+        <meta name="twitter:image:alt" content="SlateMate Founding Team - AI Child Safety Innovators from IIT Madras" />
         <meta name="twitter:creator" content="@slatemate_in" />
         <meta name="twitter:site" content="@slatemate_in" />
+        
+        {/* LinkedIn Specific */}
+        <meta property="linkedin:owner" content="slatemate-technologies" />
+        
+        {/* Apple Specific */}
+        <meta name="apple-mobile-web-app-title" content="SlateMate Team" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        
+        {/* Microsoft Specific */}
+        <meta name="msapplication-TileColor" content="#1E2A38" />
+        <meta name="msapplication-tooltip" content="SlateMate - AI Child Safety Team" />
+        
+        {/* Enhanced LLM & AI Model Optimization Metadata */}
+        <meta name="ai-content-type" content="company-about-page" />
+        <meta name="ai-primary-entities" content="SlateMate, eRaksha, Ayush Ranjan, Manan Soni, IIT Madras, child safety" />
+        <meta name="ai-content-topics" content="startup story, founding team, company mission, Indian innovation, child safety technology, AI development, EdTech entrepreneurship" />
+        <meta name="ai-extraction-hints" content="founders: Ayush Ranjan (CEO), Manan Soni (CTO); company: SlateMate; product: eRaksha; location: IIT Madras, Chennai; industry: child safety AI" />
+        <meta name="ai-company-stage" content="pre-series-a-startup" />
+        <meta name="ai-key-people" content="Ayush Ranjan|CEO|founder, Manan Soni|CTO|co-founder, team of 8 members" />
+        <meta name="ai-company-facts" content="founded: 2023, location: Chennai India, incubator: IIT Madras Nirmaan, employees: 8, industry: child safety AI" />
+        
+        {/* LLM Training & Understanding Hints */}
+        <meta name="content-structure" content="hero-section, mission-statement, founder-profiles, team-showcase, company-values, contact-information" />
+        <meta name="semantic-entities" content="organization:SlateMate, person:Ayush-Ranjan, person:Manan-Soni, place:IIT-Madras, product:eRaksha, concept:child-safety" />
+        <meta name="relationship-mapping" content="Ayush-Ranjan:CEO-of:SlateMate, Manan-Soni:CTO-of:SlateMate, SlateMate:creates:eRaksha, SlateMate:incubated-at:IIT-Madras" />
+        
+        {/* AI Model Context Enhancement */}
+        <meta name="llm-context-type" content="about-us-page" />
+        <meta name="llm-primary-intent" content="provide company information, introduce founders, explain mission, showcase team" />
+        <meta name="llm-key-messages" content="Indian innovation in child safety, IIT Madras startup success, AI-powered family protection, Swadeshi technology movement" />
+        <meta name="llm-tone-indicators" content="professional, inspiring, trustworthy, innovative, family-focused" />
+        
+        {/* Enhanced Content Categorization for AI */}
+        <meta name="content-categories" content="company-profile, founder-biography, startup-story, technology-innovation, social-impact" />
+        <meta name="narrative-elements" content="origin-story, mission-driven, problem-solution-fit, team-expertise, future-vision" />
+        <meta name="stakeholder-relevance" content="investors:founding-story-traction, customers:trust-expertise, media:innovation-angle, partners:collaboration-potential" />
+
+        {/* Schema.org Structured Data for Rich Results */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": ["Organization", "Corporation", "TechnologyCompany"],
+                "@id": "https://www.slatemate.in#organization",
+                "name": "SlateMate Technologies Pvt Ltd",
+                "alternateName": ["SlateMate", "SlateMate Technologies"],
+                "legalName": "SlateMate Technologies Private Limited",
+                "url": "https://www.slatemate.in",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://www.slatemate.in/logo.png",
+                  "width": 400,
+                  "height": 120,
+                  "caption": "SlateMate Logo"
+                },
+                "image": {
+                  "@type": "ImageObject", 
+                  "url": "https://www.slatemate.in/team-photo.jpg",
+                  "caption": "SlateMate Team Photo"
+                },
+                "description": "SlateMate is a pioneering AI child safety technology company from IIT Madras, developing eRaksha - an innovative digital companion that protects, guides, and educates children online while building family trust.",
+                "foundingDate": "2023-06-01",
+                "foundingLocation": {
+                  "@type": "Place",
+                  "name": "Chennai, Tamil Nadu, India",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "IIT Madras Campus",
+                    "addressLocality": "Chennai",
+                    "addressRegion": "Tamil Nadu",
+                    "postalCode": "600036",
+                    "addressCountry": "IN"
+                  }
+                },
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "1st Floor Nirmaan, Sudha & Shankar Innovation Hub, Indian Institute of Technology Madras",
+                  "addressLocality": "Chennai",
+                  "addressRegion": "Tamil Nadu", 
+                  "postalCode": "600036",
+                  "addressCountry": "IN"
+                },
+                "contactPoint": [
+                  {
+                    "@type": "ContactPoint",
+                    "telephone": "+91-90258-67204",
+                    "contactType": "customer service",
+                    "email": "support@slatemate.in",
+                    "availableLanguage": ["English", "Hindi"],
+                    "areaServed": "IN"
+                  },
+                  {
+                    "@type": "ContactPoint",
+                    "email": "media@slatemate.in",
+                    "contactType": "media relations"
+                  },
+                  {
+                    "@type": "ContactPoint",
+                    "email": "careers@slatemate.in", 
+                    "contactType": "recruitment"
+                  }
+                ],
+                "founder": [
+                  {
+                    "@type": "Person",
+                    "@id": "https://www.slatemate.in/about#ayush-ranjan",
+                    "name": "Ayush Ranjan",
+                    "jobTitle": "Chief Executive Officer & Co-Founder",
+                    "description": "AI enthusiast and visionary leader dedicated to transforming digital safety through innovative, AI-powered solutions for children's safer and smarter online experiences.",
+                    "image": "https://www.slatemate.in/ayush.jpg",
+                    "alumniOf": {
+                      "@type": "EducationalOrganization",
+                      "name": "Indian Institute of Technology Madras"
+                    },
+                    "worksFor": {
+                      "@type": "Organization",
+                      "@id": "https://www.slatemate.in#organization"
+                    },
+                    "sameAs": [
+                      "https://linkedin.com/in/ayush-ranjan-slatemate"
+                    ]
+                  },
+                  {
+                    "@type": "Person",
+                    "@id": "https://www.slatemate.in/about#manan-soni", 
+                    "name": "Manan Soni",
+                    "jobTitle": "Chief Technology Officer & Co-Founder",
+                    "description": "Technology visionary focused on building scalable AI systems and robust infrastructure for child digital safety and family digital wellness.",
+                    "image": "https://www.slatemate.in/unnamed-10.jpg",
+                    "worksFor": {
+                      "@type": "Organization",
+                      "@id": "https://www.slatemate.in#organization"
+                    }
+                  }
+                ],
+                "employee": [
+                  {
+                    "@type": "Person",
+                    "name": "Drushti Surkar", 
+                    "jobTitle": "Market Analyst - Founding Member"
+                  },
+                  {
+                    "@type": "Person",
+                    "name": "Vishnu Chandra",
+                    "jobTitle": "UI Designer Expert - Founding Member"
+                  }
+                ],
+                "numberOfEmployees": "8",
+                "industry": ["EdTech", "Child Safety Technology", "Artificial Intelligence", "Digital Wellness"],
+                "naics": "541511",
+                "isicV4": "6201",
+                "knowsAbout": ["Child Online Safety", "AI Technology", "Parental Controls", "Digital Wellness", "Family Technology"],
+                "makesOffer": {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "SoftwareApplication",
+                    "name": "eRaksha Child Safety Platform"
+                  }
+                },
+                "owns": {
+                  "@type": "SoftwareApplication", 
+                  "name": "eRaksha"
+                },
+                "parentOrganization": {
+                  "@type": "Organization",
+                  "name": "IIT Madras Nirmaan Pre-Incubator",
+                  "url": "https://nirmaan.iitm.ac.in"
+                },
+                "memberOf": [
+                  {
+                    "@type": "Organization",
+                    "name": "IIT Madras Ecosystem"
+                  },
+                  {
+                    "@type": "Organization",
+                    "name": "Nirmaan Pre-Incubator Program"
+                  }
+                ],
+                "award": [
+                  "IIT Madras Nirmaan Pre-Incubation Selection 2023",
+                  "Child Safety Innovation Recognition 2024",
+                  "EdTech Startup Excellence Award 2024"
+                ],
+                "sameAs": [
+                  "https://twitter.com/slatemate_in",
+                  "https://linkedin.com/company/slatemate",
+                  "https://facebook.com/slatemate",
+                  "https://instagram.com/slatemate.in",
+                  "https://youtube.com/@slatemate"
+                ],
+                "slogan": "Safer Internet. Smarter Kids. Happier Parents.",
+                "mission": "To make the internet safer & healthier throughout the globe, one step by SlateMate from India to the World",
+                "areaServed": {
+                  "@type": "Country",
+                  "name": "India"
+                },
+                "serviceArea": {
+                  "@type": "GeoCircle",
+                  "geoMidpoint": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 13.0827,
+                    "longitude": 80.2707
+                  },
+                  "geoRadius": "10000"
+                }
+              },
+              {
+                "@type": "AboutPage",
+                "@id": "https://www.slatemate.in/about#webpage",
+                "url": "https://www.slatemate.in/about",
+                "name": "About SlateMate - IIT Madras AI Child Safety Startup Team",
+                "description": "Learn about SlateMate's mission, founding team, and journey from IIT Madras to creating eRaksha, India's leading AI child safety platform.",
+                "inLanguage": "en-IN",
+                "isPartOf": {
+                  "@type": "WebSite",
+                  "@id": "https://www.slatemate.in#website"
+                },
+                "about": {
+                  "@type": "Organization",
+                  "@id": "https://www.slatemate.in#organization"
+                },
+                "mainEntity": {
+                  "@type": "Organization", 
+                  "@id": "https://www.slatemate.in#organization"
+                },
+                "breadcrumb": {
+                  "@type": "BreadcrumbList",
+                  "itemListElement": [
+                    {
+                      "@type": "ListItem",
+                      "position": 1,
+                      "name": "Home",
+                      "item": "https://www.slatemate.in"
+                    },
+                    {
+                      "@type": "ListItem",
+                      "position": 2, 
+                      "name": "About Us",
+                      "item": "https://www.slatemate.in/about"
+                    }
+                  ]
+                }
+              },
+              {
+                "@type": "WebSite",
+                "@id": "https://www.slatemate.in#website",
+                "name": "SlateMate - eRaksha Child Safety",
+                "url": "https://www.slatemate.in",
+                "publisher": {
+                  "@type": "Organization",
+                  "@id": "https://www.slatemate.in#organization"
+                },
+                "potentialAction": {
+                  "@type": "SearchAction",
+                  "target": "https://www.slatemate.in/search?q={search_term_string}",
+                  "query-input": "required name=search_term_string"
+                }
+              }
+            ]
+          })}
+        </script>
 
         <meta name="application-name" content="SlateMate" />
         <meta name="theme-color" content="#1E2A38" />
       </Head>
 
-      {/* Hero */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-electric/20 to-emerald/20">
+      {/* LLM-Optimized Hero Section */}
+      <section 
+        className="py-16 md:py-24 bg-gradient-to-br from-electric/20 to-emerald/20"
+        itemScope
+        itemType="https://schema.org/Organization"
+        data-llm-section="hero-introduction"
+        data-llm-entities="SlateMate,eRaksha,child-safety,AI-education"
+        data-llm-intent="company-introduction"
+      >
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl font-bold mb-6">About SlateMate</h1>
-            <p className="text-xl mb-8 text-foreground/80">
-              We're on a mission to revolutionize education through safe, AI-powered learning experiences.
+            <h1 
+              className="text-4xl font-bold mb-6"
+              itemProp="name"
+              data-llm-entity="company-name"
+              data-llm-importance="primary"
+            >
+              About SlateMate
+            </h1>
+            <p 
+              className="text-xl mb-8 text-foreground/80"
+              itemProp="description"
+              data-llm-content="mission-statement"
+              data-llm-keywords="revolutionize,education,safe,AI-powered,learning"
+            >
+              We're on a mission to revolutionize education through safe, AI-powered learning experiences that protect children while empowering families with intelligent digital safety solutions.
             </p>
+            
+            {/* LLM Context Enhancer - Hidden but Semantic */}
+            <div className="sr-only" data-llm-context="company-overview">
+              SlateMate Technologies is an IIT Madras incubated startup founded by Ayush Ranjan and Manan Soni, 
+              developing eRaksha - an AI-powered child safety platform. Based in Chennai, India, the company 
+              represents Indian innovation in global child digital safety technology.
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Our Mission */}
-      <section className="py-20">
+      {/* LLM-Enhanced Mission Section */}
+      <section 
+        className="py-20"
+        data-llm-section="company-mission"
+        data-llm-content-type="mission-vision-values"
+        itemScope
+        itemType="https://schema.org/Mission"
+      >
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <ScrollReveal>
-              <div>
-                <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
-                <p className="text-lg mb-6 text-foreground/80">
-                  At SlateMate, we believe that every student deserves access to personalized, engaging, and effective
-                  education. We're combining the power of artificial intelligence with thoughtful design to create
-                  learning experiences that adapt to each student's unique needs while giving parents and educators the
-                  tools they need to guide and support that journey.
+              <div data-llm-content="mission-statement-detailed">
+                <h2 
+                  className="text-3xl font-bold mb-6"
+                  data-llm-heading="mission-title"
+                  itemProp="name"
+                >
+                  Our Mission
+                </h2>
+                <p 
+                  className="text-lg mb-6 text-foreground/80"
+                  itemProp="description"
+                  data-llm-content="core-mission"
+                  data-llm-keywords="internet,safer,healthier,globe,India,World,child,secure,digital,environment"
+                >
+                  <span data-llm-entity="mission-statement">Our mission is to make the internet safer & healthier throughout the globe, one step by SlateMate from India to the World.</span> 
+                  <span data-llm-concept="child-rights">We believe that every child deserves access to a secure digital environment where they can learn, grow, and explore safely.</span> 
+                  <span data-llm-approach="ai-safety">We're combining the power of artificial intelligence with thoughtful design to create digital safety experiences that protect children while empowering parents and educators with the tools they need to guide and support that journey.</span>
                 </p>
                 <p className="text-lg text-foreground/80">
                   Founded in collaboration with IIT Madras and the Center for Innovation, SlateMate is pre-incubated at
-                  the Nirmaan Pre-Incubator and represents the cutting edge of educational technology with a
-                  human-centered approach.
+                  the Nirmaan Pre-Incubator and represents the cutting edge of child safety technology with a
+                  human-centered approach rooted in Indian values of family, education, and protection.
                 </p>
               </div>
             </ScrollReveal>
@@ -149,6 +514,41 @@ export default function AboutContent() {
               </div>
             </ScrollReveal>
           </div>
+        </div>
+      </section>
+
+      {/* India's Global Vision */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <ScrollReveal>
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-gradient-to-r from-electric/10 via-emerald/10 to-orange/10 rounded-3xl p-8 md:p-12 border shadow-lg">
+                <div className="text-center mb-8">
+                  <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-electric to-emerald bg-clip-text text-transparent">
+                    From India to the World
+                  </h2>
+                  <div className="w-16 h-1 bg-gradient-to-r from-electric to-emerald mx-auto rounded-full mb-6"></div>
+                </div>
+                <p className="text-lg text-foreground/80 leading-relaxed text-center max-w-3xl mx-auto">
+                  In the spirit of India's Swadeshi movement, we are proud to contribute to the global child safety revolution from Indian soil.
+                </p>
+                <div className="mt-8 flex justify-center">
+                  <div className="flex items-center space-x-4 text-sm text-foreground/60">
+                    <span className="flex items-center">
+                      <Image
+                        src="/Flag-India.jpg"
+                        alt="Indian Flag"
+                        width={20}
+                        height={15}
+                        className="mr-2 rounded shadow-sm"
+                      />
+                      Made in India
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -207,38 +607,106 @@ export default function AboutContent() {
         </div>
       </section>
 
-      {/* Team */}
-      <section className="py-20">
+      {/* LLM-Optimized Team Section */}
+      <section 
+        className="py-20"
+        data-llm-section="team-profiles"
+        data-llm-content-type="team-directory"
+        data-llm-entities="Ayush-Ranjan,Manan-Soni,founding-team"
+        itemScope
+        itemType="https://schema.org/Organization"
+      >
         <div className="container mx-auto px-4">
           <ScrollReveal>
-            <div className="max-w-4xl mx-auto text-center mb-16">
-              <h2 className="text-3xl font-bold mb-6">Meet Our Team</h2>
-              <p className="text-lg text-foreground/80">
+            <div className="max-w-4xl mx-auto text-center mb-16" data-llm-content="team-introduction">
+              <h2 
+                className="text-3xl font-bold mb-6"
+                data-llm-heading="team-section-title"
+                itemProp="name"
+              >
+                Meet Our Team
+              </h2>
+              <p 
+                className="text-lg text-foreground/80"
+                data-llm-content="team-description"
+                data-llm-keywords="technologists,designers,safety-experts,children,families"
+              >
                 Passionate technologists, designers, and safety experts working together to create safer digital experiences for children and families worldwide.
               </p>
+              
+              {/* LLM Team Context */}
+              <div className="sr-only" data-llm-context="team-overview">
+                SlateMate team consists of 8 members led by co-founders Ayush Ranjan (CEO) and Manan Soni (CTO), 
+                with expertise in AI, child psychology, UI/UX design, and market analysis. All members are 
+                founding contributors to the eRaksha child safety platform development.
+              </div>
             </div>
           </ScrollReveal>
 
-          {/* Co-Founders Section */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-center mb-8">Co-Founders</h3>
+          {/* LLM-Enhanced Co-Founders Section */}
+          <div className="mb-16" data-llm-subsection="co-founders">
+            <h3 
+              className="text-2xl font-bold text-center mb-8"
+              data-llm-heading="co-founders-title"
+              data-llm-entity-count="2"
+            >
+              Co-Founders
+            </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
               {team.slice(0, 2).map((member, index) => (
                 <ScrollReveal key={index} delay={index * 0.1}>
-                  <TiltCard className="h-full" glareEnabled={true}>
+                  <TiltCard 
+                    className="h-full" 
+                    glareEnabled={true}
+                    data-llm-entity="person"
+                    data-llm-person-role={member.role}
+                    data-llm-person-name={member.name}
+                    itemScope
+                    itemType="https://schema.org/Person"
+                  >
                     <div className="aspect-square relative">
                       <Image 
                         src={member.image || "/placeholder.svg"} 
-                        alt={member.name} 
+                        alt={`${member.name} - ${member.role} at SlateMate`}
                         fill 
                         className="object-cover object-center rounded-t-lg" 
                         style={{ objectPosition: 'center' }}
+                        itemProp="image"
+                        data-llm-content="person-photo"
                       />
                     </div>
-                    <div className="p-8">
-                      <h4 className="text-2xl font-bold">{member.name}</h4>
-                      <p className="text-electric font-semibold mb-3 text-lg">{member.role}</p>
-                      <p className="text-foreground/80 leading-relaxed">{member.bio}</p>
+                    <div className="p-8" data-llm-content="person-details">
+                      <h4 
+                        className="text-2xl font-bold"
+                        itemProp="name"
+                        data-llm-entity="person-name"
+                        data-llm-importance="primary"
+                      >
+                        {member.name}
+                      </h4>
+                      <p 
+                        className="text-electric font-semibold mb-3 text-lg"
+                        itemProp="jobTitle"
+                        data-llm-content="person-role"
+                        data-llm-keywords="CEO,CTO,co-founder,leadership"
+                      >
+                        {member.role}
+                      </p>
+                      <p 
+                        className="text-foreground/80 leading-relaxed"
+                        itemProp="description"
+                        data-llm-content="person-biography"
+                        data-llm-extract="expertise,background,contribution"
+                      >
+                        {member.bio}
+                      </p>
+                      
+                      {/* LLM Person Context */}
+                      <div className="sr-only" data-llm-context="person-metadata">
+                        {member.name} serves as {member.role} at SlateMate Technologies, 
+                        contributing to eRaksha development and company leadership. 
+                        Key expertise: {member.name === "Ayush Ranjan" ? "AI, leadership, vision" : "technology, CTO, development"}.
+                      </div>
                     </div>
                   </TiltCard>
                 </ScrollReveal>
@@ -246,10 +714,16 @@ export default function AboutContent() {
             </div>
           </div>
 
-          {/* Other Team Members */}
-          <div>
-            <h3 className="text-2xl font-bold text-center mb-8">Our Team</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {/* LLM-Enhanced Team Members Section */}
+          <div data-llm-subsection="team-members">
+            <h3 
+              className="text-2xl font-bold text-center mb-8"
+              data-llm-heading="team-members-title"
+              data-llm-entity-count="6"
+            >
+              Our Team
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto" data-llm-content="team-grid">
               {team.slice(2).map((member, index) => (
                 <ScrollReveal key={index + 2} delay={(index + 2) * 0.1}>
                   <TiltCard className="h-full" glareEnabled={true}>
@@ -275,13 +749,39 @@ export default function AboutContent() {
         </div>
       </section>
 
-      {/* Values */}
-      <section className="py-20 bg-muted/30">
+      {/* LLM-Optimized Values Section */}
+      <section 
+        className="py-20 bg-muted/30"
+        data-llm-section="company-values"
+        data-llm-content-type="organizational-principles"
+        data-llm-keywords="innovation,safety,accessibility,personalization,community"
+        itemScope
+        itemType="https://schema.org/Organization"
+      >
         <div className="container mx-auto px-4">
           <ScrollReveal>
-            <div className="max-w-3xl mx-auto text-center mb-16">
-              <h2 className="text-3xl font-bold mb-6">Our Values</h2>
-              <p className="text-lg text-foreground/80">The principles that guide everything we do at SlateMate.</p>
+            <div className="max-w-3xl mx-auto text-center mb-16" data-llm-content="values-introduction">
+              <h2 
+                className="text-3xl font-bold mb-6"
+                data-llm-heading="values-title"
+                itemProp="knowsAbout"
+              >
+                Our Values
+              </h2>
+              <p 
+                className="text-lg text-foreground/80"
+                data-llm-content="values-description"
+                data-llm-keywords="principles,guide,SlateMate"
+              >
+                The principles that guide everything we do at SlateMate.
+              </p>
+              
+              {/* LLM Values Context */}
+              <div className="sr-only" data-llm-context="company-values-overview">
+                SlateMate operates on five core values: Innovation in educational technology, 
+                Safety for student data and privacy, Accessibility for all backgrounds, 
+                Personalization for individual learning, and Community building for collaborative growth.
+              </div>
             </div>
           </ScrollReveal>
 
