@@ -9,47 +9,55 @@ import Head from "next/head"
 export function PricingPageContent() {
   const plans = [
     {
-      name: "Free",
-      price: "$0",
-      description: "Basic features for individual students",
+      name: "Basic",
+      price: "Free",
+      description: "Essential digital safety for one child",
       features: [
-        "Limited AI-powered learning",
-        "Basic progress tracking",
-        "Standard content library",
+        "Basic DNS protection",
+        "Simple content filtering", 
+        "Weekly safety reports",
         "Email support",
+        "1 child profile",
+        "Basic AI companion"
       ],
-      cta: "Get Started",
+      cta: "Get Started Free",
       popular: false,
     },
     {
-      name: "Premium",
-      price: "$9.99",
-      period: "/month",
-      description: "Advanced features for families",
+      name: "Standard",
+      price: "₹299",
+      period: "/month/child",
+      description: "Complete protection & AI companion",
       features: [
-        "Full AI-powered learning",
-        "Complete parent controls",
-        "Advanced progress analytics",
-        "Expanded content library",
-        "Priority support",
-        "Up to 3 student profiles",
+        "Advanced DNS protection",
+        "Real-time AI companion",
+        "Parent dashboard with insights",
+        "Safety Score & Focus Score",
+        "24/7 content monitoring",
+        "Habit building tools",
+        "Email & chat support",
+        "Up to 3 child profiles"
       ],
-      cta: "Subscribe",
+      cta: "Start Free Trial",
       popular: true,
     },
     {
-      name: "School",
-      price: "Custom",
-      description: "Enterprise solutions for educational institutions",
+      name: "Premium", 
+      price: "₹599",
+      period: "/month/child",
+      description: "Advanced family digital wellness",
       features: [
-        "School-wide deployment",
-        "LMS integration",
-        "Administrative dashboard",
-        "Custom content creation",
-        "Dedicated account manager",
-        "24/7 support",
+        "Everything in Standard",
+        "Advanced AI mentoring",
+        "Emotional Balance Index",
+        "Safe social learning access",
+        "Custom content filters",
+        "School integration",
+        "Priority support",
+        "Unlimited child profiles",
+        "Family coaching sessions"
       ],
-      cta: "Contact Sales",
+      cta: "Start Free Trial",
       popular: false,
     },
   ]
@@ -58,25 +66,25 @@ export function PricingPageContent() {
     {
       question: "Can I switch plans at any time?",
       answer:
-        "Yes, you can upgrade or downgrade your plan at any time. Changes will be applied at the start of your next billing cycle.",
+        "Yes, you can upgrade or downgrade your eRaksha plan at any time. Changes will be applied at the start of your next billing cycle.",
     },
     {
       question: "Are there discounts for annual subscriptions?",
-      answer: "Yes, we offer a 20% discount for annual subscriptions on our Premium plan.",
+      answer: "Yes, we offer a 2-month discount for annual subscriptions on both Standard and Premium plans. Pay for 10 months, get 12 months of protection.",
     },
     {
-      question: "How many students can use a Premium account?",
+      question: "How does per-child pricing work?",
       answer:
-        "The Premium plan supports up to 3 student profiles, perfect for families with multiple children.",
+        "Each plan is priced per child. The Standard plan includes up to 3 child profiles at ₹299/month, while Premium offers unlimited child profiles at ₹599/month per child.",
     },
     {
-      question: "Do you offer special pricing for schools?",
+      question: "Do you offer family discounts?",
       answer:
-        "Yes, we offer custom pricing for educational institutions based on the number of students and required features. Contact our sales team for a personalized quote.",
+        "Yes! For families with multiple children, our Premium plan offers the best value with unlimited child profiles and advanced family coaching features.",
     },
     {
       question: "Is there a free trial available?",
-      answer: "Yes, we offer a 14-day free trial of our Premium plan, no credit card required.",
+      answer: "Yes, we offer a 14-day free trial of our Standard plan, no credit card required. You can also use our Basic plan free forever.",
     },
   ]
 
@@ -128,9 +136,11 @@ export function PricingPageContent() {
       <section className="py-16 md:py-24 bg-gradient-to-br from-electric/10 to-emerald/10">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl font-bold mb-6">Simple, Transparent Pricing</h1>
+            <h1 className="text-4xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-electric to-emerald bg-clip-text text-transparent">eRaksha</span> Pricing Plans
+            </h1>
             <p className="text-xl mb-8 text-foreground/80">
-              Choose the plan that's right for you, your family, or your school.
+              Protect your child's digital journey with transparent, family-friendly pricing.
             </p>
           </div>
         </div>
@@ -190,9 +200,9 @@ export function PricingPageContent() {
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center mb-16">
-              <h2 className="text-3xl font-bold mb-6">Frequently Asked Questions</h2>
+              <h2 className="text-3xl font-bold mb-6">Pricing Questions</h2>
               <p className="text-lg text-foreground/80">
-                Have questions about our pricing? Find answers to common questions below.
+                Everything you need to know about eRaksha pricing and family protection plans.
               </p>
             </div>
           </ScrollReveal>
@@ -215,18 +225,20 @@ export function PricingPageContent() {
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <div className="max-w-4xl mx-auto bg-card rounded-2xl p-12 text-center shadow-lg border">
-              <h2 className="text-3xl font-bold mb-4">Still have questions?</h2>
+              <h2 className="text-3xl font-bold mb-4">Ready to protect your child?</h2>
               <p className="text-lg mb-8 text-foreground/80">
-                Our team is ready to help you find the perfect plan for your needs.
+                Start with our free Basic plan or get full protection with a 14-day free trial.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Button variant="glow" size="lg">
                   <Link href="/schedule-demo" className="flex items-center">
-                    Contact Sales
+                    Start Free Trial
                   </Link>
                 </Button>
                 <Button variant="outline" size="lg">
-                  View Documentation
+                  <Link href="/features" className="flex items-center">
+                    Learn More About eRaksha
+                  </Link>
                 </Button>
               </div>
             </div>

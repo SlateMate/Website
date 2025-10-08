@@ -3,52 +3,50 @@ import type { Metadata } from "next"
 import { PricingPageContent } from "./_components/pricing-page-content"
 
 export const metadata: Metadata = {
-  title: "Pricing | SlateMate",
+  title: "eRaksha Pricing | Affordable Digital Safety for Families",
   description:
-    "Discover SlateMate’s transparent and flexible pricing plans tailored for individuals, families, educators, and institutions. Choose the right plan to empower safe and personalized digital education.",
+    "Discover eRaksha's transparent and family-friendly pricing plans. Comprehensive digital safety, AI child companion, and privacy-first protection for every family budget.",
   keywords: [
-    "SlateMate pricing",
-    "education pricing plans",
-    "AI for schools",
-    "school safety software",
-    "parental control pricing",
-    "EdTech India",
-    "affordable AI education",
-    "SlateMate plans"
+    "eRaksha pricing",
+    "child safety pricing",
+    "family digital protection plans",
+    "affordable online safety",
+    "AI child companion pricing",
+    "family digital wellness",
+    "child internet safety plans",
+    "eRaksha subscription"
   ],
   openGraph: {
-    title: "Pricing | SlateMate",
+    title: "eRaksha Pricing | Affordable Family Digital Safety",
     description:
-      "View SlateMate’s flexible pricing options designed for students, families, and schools. Get started with AI-powered educational tools.",
+      "Transparent pricing for comprehensive child digital protection. Start with our free trial and choose the plan that fits your family's safety needs.",
     url: "https://www.slatemate.in/pricing",
-    siteName: "SlateMate",
+    siteName: "SlateMate eRaksha",
     images: [
       {
         url: "https://www.slatemate.in/og-image.jpg",
         width: 800,
         height: 600,
-        alt: "SlateMate Pricing Plans",
+        alt: "eRaksha Pricing Plans",
       },
     ],
-    locale: "en_US",
-    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pricing | SlateMate",
+    title: "eRaksha Pricing | Family Digital Safety Plans",
     description:
-      "Explore flexible and transparent pricing plans from SlateMate, designed for individuals, families, and schools seeking safe and smart AI-powered learning.",
-    images: ["https://www.slatemate.in/og-image.jpg"],
+      "Affordable, transparent pricing for complete family digital protection and child online safety.",
+    images: ["https://www.slatemate.in/twitter-image.png"],
     site: "@slatemate_in",
+    creator: "@slatemate_in",
   },
-  metadataBase: new URL("https://www.slatemate.in"),
+  alternates: {
+    canonical: "https://www.slatemate.in/pricing",
+  },
   robots: {
     index: true,
     follow: true,
   },
-  category: "education",
-  creator: "SlateMate Team",
-  publisher: "SlateMate",
 }
 
 export default function PricingPage() {

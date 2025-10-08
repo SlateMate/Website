@@ -17,49 +17,51 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: "SlateMate | AI for Safer Digital Learning",
+    default: "SlateMate | AI-Powered Digital Safety Platform",
     template: "%s | SlateMate",
   },
   description:
-    "SlateMate is an AI-powered platform transforming school safety, parental control, and student achievement tracking across India.",
+    "eRaksha - Your child's AI-powered digital guardian. DNS protection, safe browsing, emotional support, and positive habit building. Privacy-first family digital safety platform.",
   metadataBase: new URL("https://www.slatemate.in"),
   keywords: [
+    "eRaksha",
     "SlateMate",
-    "EdTech",
-    "AI in Education",
-    "School Management System",
-    "Parental Control App",
-    "Student Performance Tracker",
-    "Digital Parenting",
-    "Safe Internet for Kids",
-    "EdTech India",
-    "AI Child Monitoring",
-    "AI Learning Platform",
-    "AI-Powered EdTech",
+    "child online safety",
+    "digital protection kids",
+    "AI child companion",
+    "DNS protection",
+    "parental control India",
+    "online safety platform",
+    "digital habits children",
+    "family digital health",
+    "AI safety mentor",
+    "child internet guardian",
+    "safe browsing kids",
+    "digital wellness family"
   ],
   openGraph: {
     siteName: "SlateMate",
     type: "website",
     url: "https://www.slatemate.in",
-    title: "SlateMate – AI-Powered School & Parental Control Platform",
+    title: "SlateMate – AI Digital Safety Platform",
     description:
-      "Smart learning meets safe browsing. Track, protect, and empower every student with AI.",
+      "More than parental control - eRaksha is your child's AI companion for safer internet, smarter habits, and happier families.",
     images: [
       {
         url: "https://www.slatemate.in/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "SlateMate AI EdTech Platform – Child Safety & Progress Monitoring",
+        alt: "eRaksha - AI-Powered Digital Safety Platform for Children",
       },
     ],
     locale: "en_IN",
   },
   twitter: {
     card: "summary_large_image",
-    creator: "@slatemate",
-    title: "SlateMate – Empowering Schools & Parents with AI",
+    creator: "@slatemate_in",
+    title: "SlateMate – AI Digital Safety Platform",
     description:
-      "Smart parental control, real-time student progress & safe digital learning for modern Indian families.",
+      "eRaksha - AI-powered protection and growth companion for children. DNS security, habit building, and family digital wellness.",
     images: ["https://www.slatemate.in/og-image.jpg"],
   },
   icons: {
@@ -129,7 +131,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "EducationalOrganization",
+              "@type": "Organization",
               name: "SlateMate",
               url: "https://www.slatemate.in",
               logo: "https://www.slatemate.in/logo.png",
@@ -142,7 +144,7 @@ export default function RootLayout({
                 addressCountry: "India",
               },
               sameAs: [
-                "https://twitter.com/slatemate",
+                "https://twitter.com/slatemate_in",
                 "https://www.linkedin.com/company/slatemate",
               ],
               founder: [
@@ -153,8 +155,14 @@ export default function RootLayout({
                   url: "https://www.linkedin.com/in/ayushranjan636",
                 },
               ],
+              makesOffer: {
+                "@type": "Offer",
+                name: "eRaksha",
+                description: "AI-powered digital guardian providing comprehensive online safety, DNS protection, and positive habit building for children and families.",
+                category: "ChildSafetyApplication"
+              },
               description:
-                "SlateMate is a next-generation educational platform focused on child safety, AI-powered parental control, and academic growth tracking in India.",
+                "SlateMate develops eRaksha, an AI-powered digital safety platform for children and families.",
             }),
           }}
         />
@@ -162,6 +170,7 @@ export default function RootLayout({
 
       <body
         className={`${poppins.variable} font-sans bg-background text-foreground antialiased`}
+        suppressHydrationWarning
       >
         {/* Google Tag Manager (noscript) */}
         <noscript>

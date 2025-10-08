@@ -12,9 +12,9 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4">SlateMate</h3>
             <p className="text-primary-foreground/70 mb-4">
-              AI-Powered Learning.
+              Building digital safety solutions.
               <br />
-              Parent-Controlled Safety.
+              eRaksha - Safer Internet. Smarter Kids. Happier Parents.
             </p>
             <div className="flex space-x-3">
               <Button

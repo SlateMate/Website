@@ -3,31 +3,32 @@ import type { Metadata } from "next"
 import AboutContent from "./_components/AboutPageContent"
 
 export const metadata: Metadata = {
-  title: 'About SlateMate | AI for Digital Education',
+  title: 'About SlateMate | Building Digital Safety Solutions',
   description:
-    'Learn about SlateMate — our mission to make school life safer, smarter, and more connected for students, parents, and teachers. Pre-incubated at Nirmaan Pre-Incubator, IIT Madras.',
+    'Learn about SlateMate — our mission to create safer internet experiences for children. We develop eRaksha, an AI-powered digital guardian. Pre-incubated at Nirmaan Pre-Incubator, IIT Madras.',
   keywords: [
+    'eRaksha',
     'SlateMate',
-    'AI in education',
-    'School safety',
-    'Parental control',
-    'EdTech',
+    'AI child protection',
+    'digital safety for kids',
+    'online child safety',
+    'family digital wellness',
     'IIT Madras startups',
     'Nirmaan Pre Incubator',
-    'Digital education India'
+    'child internet safety India'
   ],
   openGraph: {
-    title: 'About SlateMate',
+    title: 'About eRaksha | AI Digital Guardian for Children',
     description:
-      'SlateMate is a smart AI-powered platform for digital safety and education, pre-incubated at Nirmaan Pre-Incubator, IIT Madras.',
+      'eRaksha by SlateMate is an AI-powered child digital safety platform creating safer internet experiences for families. Pre-incubated at Nirmaan Pre-Incubator, IIT Madras.',
     url: 'https://www.slatemate.in/about',
-    siteName: 'SlateMate',
+    siteName: 'SlateMate eRaksha',
     images: [
       {
         url: 'https://www.slatemate.in/og-image.jpg',
         width: 800,
         height: 600,
-        alt: 'SlateMate Overview',
+        alt: 'eRaksha - AI Child Digital Safety Platform',
       },
     ],
     locale: 'en_US',
@@ -35,9 +36,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About SlateMate',
+    title: 'About eRaksha | AI Child Protection Platform',
     description:
-      'Explore how SlateMate, an AI-driven EdTech platform pre-incubated at IIT Madras, is revolutionizing digital safety and school life.',
+      'Discover how eRaksha, an AI-powered child safety platform from IIT Madras, is creating safer digital experiences for children and families.',
     site: '@slatemate_in',
     images: ['https://www.slatemate.in/og-image.jpg'],
   },

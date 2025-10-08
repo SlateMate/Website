@@ -1,21 +1,28 @@
 import type { Metadata } from "next"
 import Image from "next/image"
+import Link from "next/link"
 import { ScrollReveal } from "@/components/animations/scroll-reveal"
+import { Button } from "@/components/ui/button"
+import { Shield, Heart, Brain, Users, Lock, School, ArrowRight, CheckCircle } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Product | SlateMate",
-  description: "Discover how SlateMate serves schools, parents, and students with its AI-powered learning platform.",
+  title: "eRaksha | AI Digital Companion for Child Safety",
+  description: "eRaksha — More than parental control. AI-powered digital companion that protects, guides, and inspires children online. DNS protection, AI mentoring, and family digital wellness.",
   keywords: [
-    "SlateMate Product",
-    "AI for Schools",
-    "School Management System",
-    "Parental Control App",
-    "Student Learning Platform",
-    "Digital Safety EdTech"
+    "eRaksha",
+    "AI child companion",
+    "digital child safety",
+    "DNS protection children",
+    "AI parental control",
+    "child online protection",
+    "digital guardian",
+    "family digital wellness",
+    "child internet safety",
+    "AI safety mentor"
   ],
   openGraph: {
-    title: "Product | SlateMate",
-    description: "Discover how SlateMate serves schools, parents, and students with its AI-powered learning platform.",
+    title: "eRaksha | AI Digital Companion for Child Safety",
+    description: "More than parental control. AI-powered digital companion that protects, guides, and inspires children online.",
     url: "https://www.slatemate.in/product",
     siteName: "SlateMate",
     type: "website",
@@ -24,15 +31,15 @@ export const metadata: Metadata = {
         url: "https://www.slatemate.in/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "SlateMate Product Overview",
+        alt: "eRaksha AI Digital Companion for Child Safety",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Product | SlateMate",
-    description: "Explore SlateMate’s digital learning tools for schools, parents, and students.",
-    creator: "@slatemate",
+    title: "eRaksha | AI Digital Companion for Child Safety",
+    description: "Protect. Guide. Inspire. AI-powered safety and growth for every child.",
+    creator: "@slatemate_in",
     images: ["https://www.slatemate.in/og-image.jpg"],
   },
 }
@@ -41,202 +48,194 @@ export default function ProductPage() {
   return (
     <>
       <div className="pt-16">
-        {/* Hero */}
-        <section className="py-16 md:py-24 bg-gradient-to-br from-electric/20 to-emerald/20">
-          <ScrollReveal>
-            <div className="container mx-auto px-4">
-              <div className="max-w-3xl mx-auto text-center">
-                <h1 className="text-4xl font-bold mb-6">The Complete Learning Platform</h1>
-                <p className="text-xl mb-8 text-foreground/80">
-                  SlateMate adapts to the needs of students, parents, and educators, providing a cohesive learning
-                  ecosystem for everyone involved.
-                </p>
-              </div>
-            </div>
-          </ScrollReveal>
-        </section>
-
-        {/* For Schools Section */}
-        <section id="schools" className="py-24 scroll-mt-20">
-          <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+        {/* Hero Section */}
+        <section className="py-24 md:py-32">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
               <ScrollReveal>
-                <div>
-                  <span className="inline-block text-electric font-medium mb-2">FOR SCHOOLS</span>
-                  <h2 className="text-3xl font-bold mb-6">Empower Your Educational Institution</h2>
-                  <p className="text-lg mb-6 text-foreground/80">
-                    SlateMate integrates seamlessly with your existing systems while providing powerful new tools for
-                    teachers and administrators.
-                  </p>
-
-                  <ul className="space-y-4">
-                    {[
-                      "Customizable admin dashboards",
-                      "Attendance tracking integration",
-                      "LMS compatibility",
-                      "Class management tools",
-                      "Teacher insight panels",
-                      "Curriculum alignment features",
-                    ].map((feature, index) => (
-                      <li key={index} className="flex items-start">
-                        <div className="mr-3 h-6 w-6 flex-shrink-0 rounded-full bg-emerald flex items-center justify-center">
-                          <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
-                          </svg>
-                        </div>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </ScrollReveal>
-
-              <ScrollReveal delay={0.2}>
-                <div className="relative rounded-2xl overflow-hidden shadow-xl border border-border/50 aspect-[4/3]">
-                  <Image
-                    src="/pro-school.png?text=School+Dashboard&fontsize=24&bg=1E2A38&fg=FFFFFF"
-                    alt="School Dashboard"
-                    fill
-                    className="object-cover"
-                  />
+                <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                  <span className="bg-gradient-to-r from-electric to-emerald bg-clip-text text-transparent">
+                    eRaksha
+                  </span>
+                </h1>
+                <p className="text-xl md:text-2xl text-foreground/80 mb-8 max-w-2xl mx-auto">
+                  AI-powered digital companion that protects, guides, and inspires children online
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button variant="glow" size="lg">
+                    <Link href="/pricing" className="flex items-center">
+                      Start Free Trial <ArrowRight className="ml-2 h-5 w-5" />
+                    </Link>
+                  </Button>
+                  <Button variant="outline" size="lg">
+                    <Link href="/schedule-demo">
+                      Schedule Demo
+                    </Link>
+                  </Button>
                 </div>
               </ScrollReveal>
             </div>
           </div>
         </section>
 
-        {/* For Parents Section */}
-        <section id="parents" className="py-24 bg-muted/30 scroll-mt-20">
-          <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+        {/* Problem Section */}
+        <section className="py-20 bg-muted/30">
+          <div className="container mx-auto px-6">
+            <div className="max-w-3xl mx-auto text-center">
               <ScrollReveal>
-                <div className="order-2 md:order-1">
-                  <div className="relative rounded-2xl overflow-hidden shadow-xl border border-border/50 aspect-[4/3]">
-                    <Image
-                      src="/pro-parents.png?text=Parent+Controls&fontsize=24&bg=1E2A38&fg=FFFFFF"
-                      alt="Parent Controls"
-                      fill
-                      className="object-cover"
-                    />
+                <h2 className="text-3xl font-bold mb-6">The Challenge</h2>
+                <p className="text-lg text-foreground/80 mb-12">
+                  Children face online dangers while parents struggle with traditional blocking tools that don't explain or educate.
+                </p>
+                <div className="grid md:grid-cols-3 gap-8">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-destructive mb-2">60%</div>
+                    <p className="text-sm text-foreground/70">Harmful content exposure</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-destructive mb-2">32%</div>
+                    <p className="text-sm text-foreground/70">Rising cyber crimes</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-destructive mb-2">85%</div>
+                    <p className="text-sm text-foreground/70">Parents feel helpless</p>
                   </div>
                 </div>
               </ScrollReveal>
-
-              <ScrollReveal delay={0.2}>
-                <div className="order-1 md:order-2">
-                  <span className="inline-block text-electric font-medium mb-2">FOR PARENTS</span>
-                  <h2 className="text-3xl font-bold mb-6">Stay Involved in Your Child's Learning</h2>
-                  <p className="text-lg mb-6 text-foreground/80">
-                    SlateMate gives parents unprecedented visibility and control over their child's digital learning
-                    experience.
-                  </p>
-
-                  <ul className="space-y-4">
-                    {[
-                      "Real-time activity monitoring",
-                      "Content filtering controls",
-                      "Screen time management",
-                      "Progress reports and alerts",
-                      "Direct messaging with teachers",
-                      "Learning goal collaboration",
-                    ].map((feature, index) => (
-                      <li key={index} className="flex items-start">
-                        <div className="mr-3 h-6 w-6 flex-shrink-0 rounded-full bg-electric flex items-center justify-center">
-                          <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
-                          </svg>
-                        </div>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </ScrollReveal>
             </div>
           </div>
         </section>
 
-        {/* AI Features Section */}
-        <section id="ai-features" className="py-24 scroll-mt-20">
-          <div className="container mx-auto px-4">
-            <ScrollReveal>
-              <div className="max-w-3xl mx-auto text-center mb-16">
-                <span className="inline-block text-electric font-medium mb-2">AI FEATURES</span>
-                <h2 className="text-3xl font-bold mb-6">Powered by Advanced AI</h2>
-                <p className="text-lg text-foreground/80">
-                  Our AI technology adapts to each student's learning style, pace, and preferences to create a truly
-                  personalized educational experience.
-                </p>
-              </div>
-            </ScrollReveal>
+        {/* Solution Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto">
+              <ScrollReveal>
+                <div className="text-center mb-16">
+                  <h2 className="text-3xl font-bold mb-6">How eRaksha Works</h2>
+                  <p className="text-lg text-foreground/80">
+                    Two layers of protection: technical safety and emotional guidance
+                  </p>
+                </div>
+              </ScrollReveal>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "Adaptive Learning Paths",
-                  description: "Dynamic curriculum that adjusts based on student performance and learning patterns.",
-                },
-                {
-                  title: "Natural Language Understanding",
-                  description: "AI that comprehends student questions and provides contextual assistance.",
-                },
-                {
-                  title: "Personalized Recommendations",
-                  description: "Smart content suggestions that reinforce learning and address knowledge gaps.",
-                },
-                {
-                  title: "Progress Prediction",
-                  description: "Forecasting tools that help identify potential challenges before they become obstacles.",
-                },
-                {
-                  title: "Learning Style Detection",
-                  description: "Technology that identifies and adapts to individual learning preferences.",
-                },
-                {
-                  title: "Content Generation",
-                  description: "AI-created exercises and examples tailored to each student's needs.",
-                },
-              ].map((feature, index) => (
-                <ScrollReveal key={index} delay={index * 0.1}>
-                  <div className="bg-card border rounded-xl p-6 h-full tilt-card">
-                    <div className="tilt-card-content">
-                      <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                      <p className="text-foreground/80">{feature.description}</p>
+              <div className="grid md:grid-cols-2 gap-12">
+                <ScrollReveal>
+                  <div className="text-center">
+                    <div className="w-20 h-20 bg-electric/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Shield className="h-10 w-10 text-electric" />
                     </div>
+                    <h3 className="text-xl font-bold mb-4">DNS Protection</h3>
+                    <p className="text-foreground/70">
+                      Advanced filtering blocks harmful content across all devices and platforms
+                    </p>
                   </div>
                 </ScrollReveal>
-              ))}
+                
+                <ScrollReveal delay={0.1}>
+                  <div className="text-center">
+                    <div className="w-20 h-20 bg-emerald/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Brain className="h-10 w-10 text-emerald" />
+                    </div>
+                    <h3 className="text-xl font-bold mb-4">AI Companion</h3>
+                    <p className="text-foreground/70">
+                      Explains blocks, provides emotional support, and builds positive digital habits
+                    </p>
+                  </div>
+                </ScrollReveal>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 bg-muted/30">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto">
+              <ScrollReveal>
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl font-bold mb-6">Key Features</h2>
+                </div>
+              </ScrollReveal>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {[
+                  {
+                    icon: <Shield className="h-8 w-8 text-electric" />,
+                    title: "Content Protection",
+                    description: "Blocks harmful content across all platforms"
+                  },
+                  {
+                    icon: <Brain className="h-8 w-8 text-emerald" />,
+                    title: "AI Guidance",
+                    description: "Kid-friendly explanations and support"
+                  },
+                  {
+                    icon: <Users className="h-8 w-8 text-blue-500" />,
+                    title: "Parent Dashboard",
+                    description: "Real-time safety and focus insights"
+                  },
+                  {
+                    icon: <Lock className="h-8 w-8 text-purple-500" />,
+                    title: "Privacy First",
+                    description: "No ads, no data selling, secure by design"
+                  },
+                  {
+                    icon: <Heart className="h-8 w-8 text-pink-500" />,
+                    title: "Emotional Support",
+                    description: "Check-ins and coping strategies"
+                  },
+                  {
+                    icon: <School className="h-8 w-8 text-orange-500" />,
+                    title: "Learning Focus",
+                    description: "Study buddy and habit building"
+                  }
+                ].map((feature, index) => (
+                  <ScrollReveal key={index} delay={index * 0.1}>
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-background rounded-full flex items-center justify-center mx-auto mb-4">
+                        {feature.icon}
+                      </div>
+                      <h3 className="font-semibold mb-2">{feature.title}</h3>
+                      <p className="text-sm text-foreground/70">{feature.description}</p>
+                    </div>
+                  </ScrollReveal>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+        {/* CTA Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-6">
+            <div className="max-w-3xl mx-auto text-center">
+              <ScrollReveal>
+                <h2 className="text-3xl font-bold mb-6">
+                  Ready to Get Started?
+                </h2>
+                <p className="text-lg text-foreground/80 mb-8">
+                  Join families worldwide who trust eRaksha to keep their children safe online
+                </p>
+                <div className="flex flex-col sm:flex-row justify-center gap-4">
+                  <Button variant="glow" size="lg">
+                    <Link href="/pricing" className="flex items-center">
+                      Start Free Trial <ArrowRight className="ml-2 h-5 w-5" />
+                    </Link>
+                  </Button>
+                  <Button variant="outline" size="lg">
+                    <Link href="/schedule-demo">
+                      Schedule Demo
+                    </Link>
+                  </Button>
+                </div>
+              </ScrollReveal>
             </div>
           </div>
         </section>
       </div>
-
-      {/* JSON-LD Product Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            name: "SlateMate",
-            applicationCategory: "EducationalApplication",
-            operatingSystem: "Web-based",
-            url: "https://www.slatemate.in/product",
-            offers: {
-              "@type": "Offer",
-              price: "300.00",
-              priceCurrency: "INR"
-            },
-            aggregateRating: {
-              "@type": "AggregateRating",
-              ratingValue: "4.9",
-              reviewCount: "238"
-            },
-            description:
-              "SlateMate is an AI-powered school and parental control platform providing secure learning environments, content moderation, and real-time insights.",
-          }),
-        }}
-      />
     </>
   )
 }
