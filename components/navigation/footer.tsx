@@ -56,7 +56,7 @@ export function Footer() {
                 className="rounded-full hover:bg-primary-foreground/10"
               >
                 <a
-                  href="https://instagram.com/slatemate.in"
+                  href="https://instagram.com/slatemate_official"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
