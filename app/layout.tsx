@@ -93,8 +93,8 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: "/logo.png",
-    shortcut: "/favicon-32x32.png",
-    apple: "/apple-touch-icon.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
   },
   manifest: "/site.webmanifest",
   alternates: {
