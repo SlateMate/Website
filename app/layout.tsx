@@ -92,7 +92,7 @@ export const metadata: Metadata = {
     images: ["https://www.slatemate.in/og-image.jpg"],
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/logo.png",
     shortcut: "/favicon-32x32.png",
     apple: "/apple-touch-icon.png",
   },
