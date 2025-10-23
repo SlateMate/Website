@@ -602,15 +602,6 @@ export default function AboutContent() {
                   className="max-h-16 w-auto"
                 />
               </div>
-              <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-zinc-900 dark:to-zinc-800 p-6 rounded-xl shadow-md border border-slate-200 dark:border-zinc-700 flex flex-col items-center justify-center h-40 transition-transform hover:scale-[1.02] hover:shadow-lg">
-                <Image
-                  src="/sarvam-ai-logo.png"
-                  alt="Sarvam AI Logo"
-                  width={160}
-                  height={80}
-                  className="max-h-20 w-auto mb-2"
-                />
-              </div>
             </div>
           </ScrollReveal>
         </div>
