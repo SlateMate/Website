@@ -279,7 +279,7 @@ export default function AboutContent() {
                       "@id": "https://www.slatemate.in#organization"
                     },
                     "sameAs": [
-                      "https://linkedin.com/in/ayush-ranjan-slatemate"
+                      "https://linkedin.com/in/ayushranjan636"
                     ]
                   },
                   {
@@ -586,7 +586,7 @@ export default function AboutContent() {
               </div>
               <div className="bg-card p-6 rounded-xl shadow-sm border flex items-center justify-center h-32">
                 <Image
-                  src="/aws-st.png?height=80&width=360&text=EdTech+Alliance"
+                  src="/Amazon-Web-Services-AWS-Logo.png?height=80&width=360&text=EdTech+Alliance"
                   alt="AWS EdTech Startup Program"
                   width={160}
                   height={80}
@@ -600,6 +600,15 @@ export default function AboutContent() {
                   width={160}
                   height={80}
                   className="max-h-16 w-auto"
+                />
+              </div>
+              <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-zinc-900 dark:to-zinc-800 p-6 rounded-xl shadow-md border border-slate-200 dark:border-zinc-700 flex flex-col items-center justify-center h-40 transition-transform hover:scale-[1.02] hover:shadow-lg">
+                <Image
+                  src="/sarvam-ai-logo.png"
+                  alt="Sarvam AI Logo"
+                  width={160}
+                  height={80}
+                  className="max-h-20 w-auto mb-2"
                 />
               </div>
             </div>
