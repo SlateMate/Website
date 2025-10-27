@@ -19,7 +19,7 @@ export default function AboutContent() {
       name: "Stealth Partner",
       role: "CTO & Co Founder",
       bio: "Technology visionary focused on building scalable AI systems and robust infrastructure for child digital safety and family digital wellness.",
-      image: "/unnamed-69.jpg",
+      image: "/unnamed-69.png",
     },
     {
       name: "Drushti Surkar",
