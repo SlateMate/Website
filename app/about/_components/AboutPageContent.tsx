@@ -16,10 +16,10 @@ export default function AboutContent() {
       image: "/ayush.jpg",
     },
     {
-      name: "Manan Soni",
+      name: "Stealth Partner",
       role: "CTO & Co Founder",
       bio: "Technology visionary focused on building scalable AI systems and robust infrastructure for child digital safety and family digital wellness.",
-      image: "/unnamed-10.jpg",
+      image: "/unnamed-69.jpg",
     },
     {
       name: "Drushti Surkar",
