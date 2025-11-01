@@ -44,31 +44,37 @@ export function ProductSection() {
       title: "AI-Powered Learning",
       description: "Personalized learning paths adapted to each student's unique needs and pace.",
       icon: Brain,
+      color: "blue",
     },
     {
       title: "Parent Controls",
       description: "Complete oversight and control over content, screen time, and learning progress.",
       icon: Shield,
+      color: "orange",
     },
     {
       title: "School Integration",
       description: "Seamlessly integrates with school curriculum and learning management systems.",
       icon: School,
+      color: "blue",
     },
     {
       title: "Social Learning",
       description: "Safe, moderated collaborative learning spaces for students to work together.",
       icon: Users,
+      color: "orange",
     },
     {
       title: "Progress Analytics",
       description: "Detailed insights into learning patterns, strengths, and areas for improvement.",
       icon: BarChart,
+      color: "blue",
     },
     {
       title: "Data Privacy",
       description: "Industry-leading security measures to protect student data and privacy.",
       icon: Lock,
+      color: "orange",
     },
   ]
 
@@ -113,7 +119,7 @@ export function ProductSection() {
   return (
     <section ref={sectionRef} id="product" className="py-20">
       <div className="container mx-auto px-4">
-        <div ref={(el) => (elementsRef.current[0] = el)} className="text-center mb-16 scroll-animation">
+  <div ref={(el) => { elementsRef.current[0] = el }} className="text-center mb-16 scroll-animation">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Transforming Education with Technology</h2>
           <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
             SlateMate combines cutting-edge AI with thoughtful design to create a learning experience that's both
@@ -122,15 +128,21 @@ export function ProductSection() {
         </div>
 
         <div
-          ref={(el) => (elementsRef.current[1] = el)}
+          ref={(el) => { elementsRef.current[1] = el }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20 scroll-animation"
         >
           {features.map((feature, index) => (
-            <FeatureCard key={index} title={feature.title} description={feature.description} icon={feature.icon} />
+            <FeatureCard
+              key={index}
+              title={feature.title}
+              description={feature.description}
+              icon={feature.icon}
+              color={feature.color}
+            />
           ))}
         </div>
 
-        <div ref={(el) => (elementsRef.current[2] = el)} className="text-center mb-16 scroll-animation">
+  <div ref={(el) => { elementsRef.current[2] = el }} className="text-center mb-16 scroll-animation">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Choose Your Plan</h2>
           <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
             Flexible pricing options to meet the needs of individual students, families, and educational institutions.
@@ -138,7 +150,7 @@ export function ProductSection() {
         </div>
 
         <div
-          ref={(el) => (elementsRef.current[3] = el)}
+          ref={(el) => { elementsRef.current[3] = el }}
           className="grid grid-cols-1 md:grid-cols-3 gap-8 scroll-animation"
         >
           {pricingPlans.map((plan, index) => (

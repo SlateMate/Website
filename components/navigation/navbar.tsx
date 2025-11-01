@@ -2,11 +2,11 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { motion } from "framer-motion"
 import { Menu, ChevronDown, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { ThemeToggle } from "@/components/theme-toggle"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 
 type NavItem = {
@@ -16,7 +16,6 @@ type NavItem = {
 }
 
 const navItems: NavItem[] = [
-  { title: "Home", href: "/" },
   { title: "eRaksha", href: "/product" },
   { title: "Features", href: "/features" },
   { title: "Pricing", href: "/pricing" },
@@ -57,20 +56,23 @@ export function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-          isScrolled ? "bg-background/80 backdrop-blur-lg border-b" : "bg-transparent"
-        }`}
+        className="fixed top-4 left-1/2 -translate-x-1/2 w-[65%] max-w-3xl z-40 transition-all duration-500 ease-in-out"
         data-llm-component="main-navigation"
         data-llm-content-type="site-navigation"
         data-llm-purpose="website-navigation-primary"
         itemScope
         itemType="https://schema.org/SiteNavigationElement"
       >
-        <div 
-          className="container mx-auto px-4 h-16 flex items-center justify-between"
+        <div
+          className={`transition-all duration-500 ease-in-out rounded-2xl border px-6 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] ${
+            isScrolled 
+              ? "bg-background/80 backdrop-blur-xl border-border/50 py-3" 
+              : "bg-background/50 backdrop-blur-md border-border/30 py-4"
+          }`}
           data-llm-content="navigation-container"
         >
           {/* LLM-Optimized Logo */}
+          <div className="flex items-center justify-between">
           <Link 
             href="/" 
             className="flex items-center"
@@ -83,10 +85,17 @@ export function Navbar() {
               initial={{ x: -20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="font-bold text-xl"
+              className="relative h-8 w-auto"
               data-llm-brand="SlateMate"
             >
-              SlateMate
+              <Image
+                src="/slatemate-logo.png"
+                alt="SlateMate"
+                width={160}
+                height={32}
+                className="h-8 w-auto object-contain"
+                priority
+              />
             </motion.div>
           </Link>
 
@@ -132,7 +141,7 @@ export function Navbar() {
                   {pathname === item.href && (
                     <motion.div
                       layoutId="navbar-indicator"
-                      className="absolute bottom-0 left-0 right-0 h-[2px] bg-electric"
+                      className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-bluePrimary to-electric"
                       transition={{ type: "spring", stiffness: 500, damping: 30 }}
                     />
                   )}
@@ -143,12 +152,6 @@ export function Navbar() {
 
           {/* Right side buttons */}
           <div className="flex items-center gap-2">
-            <ThemeToggle />
-
-            <Button variant="glow" className="hidden md:flex" asChild>
-              <Link href="/login">Login</Link>
-            </Button>
-
             <Button
               variant="ghost"
               size="icon"
@@ -158,6 +161,7 @@ export function Navbar() {
             >
               {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
+          </div>
           </div>
         </div>
       </header>

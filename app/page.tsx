@@ -1,7 +1,6 @@
 import Link from "next/link"
 import type { Metadata } from "next"
 import { ArrowRight } from "lucide-react"
-import { HeroAnimation } from "@/components/home/hero-animation"
 import { Button } from "@/components/ui/button"
 import { ScrollReveal } from "@/components/animations/scroll-reveal"
 import { Counter } from "@/components/animations/counter"
@@ -154,7 +153,11 @@ export default function Home() {
         itemScope
         itemType="https://schema.org/SoftwareApplication"
       >
-        <HeroAnimation />
+        {/* Animated Gradient Blobs */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 -left-32 w-[500px] h-[500px] bg-gradient-to-br from-blueLight/40 to-bluePrimary/30 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+          <div className="absolute top-40 -right-32 w-[500px] h-[500px] bg-gradient-to-br from-orangeLight/40 to-orange/30 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+        </div>
         <div className="container mx-auto px-4 py-20 relative z-10">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center" data-llm-content="value-proposition">
@@ -165,7 +168,7 @@ export default function Home() {
                 itemProp="name"
               >
                 <span 
-                  className="bg-clip-text text-transparent bg-gradient-to-r from-electric to-emerald"
+                  className="bg-clip-text text-transparent bg-gradient-to-r from-bluePrimary via-electric to-blueLight"
                   data-llm-entity="brand-promise"
                   data-llm-keywords="safer,internet,smarter,kids,happier,parents"
                 >
@@ -188,14 +191,14 @@ export default function Home() {
                 it's a comprehensive digital guardian for children's online safety and development.
               </div>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Button variant="glow" size="lg">
+                <Button variant="glow" size="lg" className="bg-gradient-to-r from-bluePrimary to-electric hover:opacity-90 text-white border-0 shadow-lg shadow-electric/20">
                   <Link href="/features" className="flex items-center">
                     Explore eRaksha
                   </Link>
                 </Button>
 
-                <Button variant="outline" size="lg" className="border-2">
-                  <Link href="/" className="flex items-center">
+                <Button variant="outline" size="lg" className="border-2 border-electric hover:bg-blueLight/20">
+                  <Link href="https://chat.whatsapp.com/GPwdAcFrLhzFN69qIvPgV0?mode=wwt" target="_blank" rel="noopener noreferrer" className="flex items-center">
                     Get Started – Free Trial <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
@@ -205,8 +208,33 @@ export default function Home() {
         </div>
       </section>
 
+{/* Partners Marquee Strip */}
+<section className="py-8 bg-muted/30 border-y border-border/50 overflow-hidden">
+  <div className="container mx-auto px-4">
+    <p className="text-center text-sm text-muted-foreground mb-6">Trusted by leading organizations</p>
+    <div className="relative flex overflow-x-hidden">
+      <div className="animate-marquee whitespace-nowrap flex items-center gap-12">
+        <span className="text-2xl font-semibold text-muted-foreground/70">IIT Madras</span>
+        <span className="text-2xl font-semibold text-muted-foreground/70">Nirmaan</span>
+        <span className="text-2xl font-semibold text-muted-foreground/70">AWS</span>
+        <span className="text-2xl font-semibold text-muted-foreground/70">SarvamAI</span>
+        <span className="text-2xl font-semibold text-muted-foreground/70">MongoDB</span>
+        <span className="text-2xl font-semibold text-muted-foreground/70 mr-12">Atlassian</span>
+      </div>
+      <div className="absolute top-0 animate-marquee2 whitespace-nowrap flex items-center gap-12">
+        <span className="text-2xl font-semibold text-muted-foreground/70">IIT Madras</span>
+        <span className="text-2xl font-semibold text-muted-foreground/70">Nirmaan</span>
+        <span className="text-2xl font-semibold text-muted-foreground/70">AWS</span>
+        <span className="text-2xl font-semibold text-muted-foreground/70">SarvamAI</span>
+        <span className="text-2xl font-semibold text-muted-foreground/70">MongoDB</span>
+        <span className="text-2xl font-semibold text-muted-foreground/70 mr-12">Atlassian</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 {/* Benefits Grid */}
-<section className="py-20 bg-gradient-to-br from-electric/5 to-emerald/5">
+<section className="py-20 bg-gradient-to-br from-blueLight/20 via-background to-orangeLight/15">
   <div className="container mx-auto px-6">
     <div className="text-center mb-16">
       <h2 className="text-3xl font-bold mb-4">Why Families Choose eRaksha</h2>
@@ -242,7 +270,7 @@ export default function Home() {
         }
       ].map((benefit, index) => (
         <ScrollReveal key={index} delay={index * 0.1}>
-          <div className="bg-card border rounded-xl p-6 h-full tilt-card">
+          <div className="bg-card border border-blueLight/30 rounded-xl p-6 h-full tilt-card hover:border-electric/50 transition-colors">
             <div className="tilt-card-content">
               <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
               <p className="text-foreground/80">{benefit.description}</p>
@@ -259,14 +287,18 @@ export default function Home() {
   <div className="container mx-auto px-6">
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
       {[
-        { prefix: "", value: 60, suffix: "%", label: "Children encounter harmful content before 16" },
-        { prefix: "", value: 250, suffix: "M+", label: "Young internet users in India by 2025" },
-        { prefix: "", value: 85, suffix: "%", label: "Parents struggling with unsafe screen time" },
-        { prefix: "", value: 10, suffix: "K+", label: "Families we aim to protect in Year 1" },
+        { prefix: "", value: 60, suffix: "%", label: "Children encounter harmful content before 16", gradient: "blue" },
+        { prefix: "", value: 250, suffix: "M+", label: "Young internet users in India by 2025", gradient: "orange" },
+        { prefix: "", value: 85, suffix: "%", label: "Parents struggling with unsafe screen time", gradient: "blue" },
+        { prefix: "", value: 10, suffix: "K+", label: "Families we aim to protect in Year 1", gradient: "orange" },
       ].map((stat, index) => (
         <ScrollReveal key={index} delay={index * 0.1}>
           <div 
-            className="text-center p-6 bg-card rounded-xl shadow-sm border"
+            className={`group text-center p-6 rounded-xl border transition-all duration-500 ease-out cursor-pointer
+              ${stat.gradient === "blue" 
+                ? "bg-background hover:bg-gradient-to-br hover:from-white hover:via-blueLight/20 hover:to-white border-blueLight/30 hover:border-electric/40 hover:shadow-[0_0_30px_-5px_rgba(115,158,254,0.3)]" 
+                : "bg-background hover:bg-gradient-to-br hover:from-white hover:via-orangeLight/20 hover:to-white border-blueLight/30 hover:border-orange/40 hover:shadow-[0_0_30px_-5px_rgba(249,189,96,0.3)]"
+              }`}
             data-llm-content="statistics"
             data-llm-entity="metric"
             itemScope
@@ -285,17 +317,19 @@ export default function Home() {
 <section className="py-24">
   <ScrollReveal>
     <div className="container mx-auto px-6">
-      <div className="max-w-4xl mx-auto bg-gradient-to-br from-midnight to-electric/90 rounded-3xl p-12 text-white text-center shadow-xl">
+      <div className="max-w-4xl mx-auto bg-gradient-to-br from-bluePrimary via-electric to-blueLight rounded-3xl p-12 text-white text-center shadow-xl">
         <h2 className="text-3xl font-bold mb-4">We are not parental control. We are eRaksha.</h2>
         <p className="text-xl mb-8 opacity-90">
           Join us in shaping a safer digital future. Empower your child with guidance, trust, and protection.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <Button variant="glow" size="lg" className="border border-white/20 bg-white/10 backdrop-blur-sm">
-            Get Started Free
+          <Button variant="glow" size="lg" className="border border-white/20 bg-white/20 backdrop-blur-sm hover:bg-white/30" asChild>
+            <Link href="https://chat.whatsapp.com/GPwdAcFrLhzFN69qIvPgV0?mode=wwt" target="_blank" rel="noopener noreferrer">
+              Get Started Free
+            </Link>
           </Button>
-          <Button variant="outline" size="lg" className="bg-transparent border-2 border-white/20 hover:bg-white/10">
-            <Link href="/schedule-demo">Schedule Demo</Link>
+          <Button variant="outline" size="lg" className="bg-transparent border-2 border-white/40 hover:bg-white/10 text-white" asChild>
+            <Link href="https://wa.me/919025867204?text=Hi,%20I%27d%20like%20to%20schedule%20a%20demo%20for%20eRaksha" target="_blank" rel="noopener noreferrer">Schedule Demo</Link>
           </Button>
         </div>
       </div>

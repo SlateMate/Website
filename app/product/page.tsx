@@ -821,7 +821,7 @@ export default function ProductPage() {
       
       <div className="pt-16">
         {/* Hero Section */}
-        <section className="py-24 md:py-32">
+        <section className="py-24 md:py-32 bg-gradient-to-br from-blueLight/15 via-background to-orangeLight/10">
           <div className="container mx-auto px-6">
             <div className="max-w-3xl mx-auto text-center">
               <ScrollReveal>
@@ -834,11 +834,11 @@ export default function ProductPage() {
                   AI-powered digital companion that protects, guides, and inspires children online
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button variant="glow" size="lg">
-                    <Link href="/pricing">Start Free Trial</Link>
+                  <Button variant="glow" size="lg" asChild>
+                    <Link href="https://chat.whatsapp.com/GPwdAcFrLhzFN69qIvPgV0?mode=wwt" target="_blank" rel="noopener noreferrer">Start Free Trial</Link>
                   </Button>
-                  <Button variant="outline" size="lg">
-                    <Link href="/schedule-demo">Schedule Demo</Link>
+                  <Button variant="outline" size="lg" asChild>
+                    <Link href="https://wa.me/919025867204?text=Hi,%20I%27d%20like%20to%20schedule%20a%20demo%20for%20eRaksha" target="_blank" rel="noopener noreferrer">Schedule Demo</Link>
                   </Button>
                 </div>
               </ScrollReveal>
@@ -856,15 +856,15 @@ export default function ProductPage() {
                   Children face online dangers while parents struggle with traditional blocking tools that don't explain or educate.
                 </p>
                 <div className="grid md:grid-cols-3 gap-8">
-                  <div className="text-center">
+                  <div className="text-center bg-card p-8 rounded-xl border border-border/30 hover:shadow-[0_0_30px_rgba(249,189,96,0.3)] transition-all duration-500">
                     <div className="text-3xl font-bold text-destructive mb-2">60%</div>
                     <p className="text-sm text-foreground/70">Harmful content exposure</p>
                   </div>
-                  <div className="text-center">
+                  <div className="text-center bg-card p-8 rounded-xl border border-border/30 hover:shadow-[0_0_30px_rgba(115,158,254,0.3)] transition-all duration-500">
                     <div className="text-3xl font-bold text-destructive mb-2">32%</div>
                     <p className="text-sm text-foreground/70">Rising cyber crimes</p>
                   </div>
-                  <div className="text-center">
+                  <div className="text-center bg-card p-8 rounded-xl border border-border/30 hover:shadow-[0_0_30px_rgba(249,189,96,0.3)] transition-all duration-500">
                     <div className="text-3xl font-bold text-destructive mb-2">85%</div>
                     <p className="text-sm text-foreground/70">Parents feel helpless</p>
                   </div>
@@ -877,7 +877,7 @@ export default function ProductPage() {
         {/* Solution Section */}
         <section className="py-20">
           <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-5xl mx-auto bg-gradient-to-br from-blueLight/10 via-background to-orangeLight/10 p-12 rounded-2xl border border-border/30 shadow-lg">
               <ScrollReveal>
                 <div className="text-center mb-16">
                   <h2 className="text-3xl font-bold mb-6">How eRaksha Works</h2>
@@ -889,9 +889,9 @@ export default function ProductPage() {
 
               <div className="grid md:grid-cols-2 gap-12">
                 <ScrollReveal>
-                  <div className="text-center">
-                    <div className="w-20 h-20 bg-electric/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <Shield className="h-10 w-10 text-electric" />
+                  <div className="text-center bg-gradient-to-br from-blueLight/10 to-blue-primary/5 p-10 rounded-xl border border-border/30 hover:shadow-[0_0_40px_rgba(115,158,254,0.4)] transition-all duration-500 hover:scale-105">
+                    <div className="w-20 h-20 bg-background/80 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                      <Shield className="h-10 w-10 text-blue-primary" />
                     </div>
                     <h3 className="text-xl font-bold mb-4">DNS Protection</h3>
                     <p className="text-foreground/70">
@@ -901,9 +901,9 @@ export default function ProductPage() {
                 </ScrollReveal>
                 
                 <ScrollReveal delay={0.1}>
-                  <div className="text-center">
-                    <div className="w-20 h-20 bg-emerald/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <Brain className="h-10 w-10 text-emerald" />
+                  <div className="text-center bg-gradient-to-br from-orangeLight/10 to-orange/5 p-10 rounded-xl border border-border/30 hover:shadow-[0_0_40px_rgba(249,189,96,0.4)] transition-all duration-500 hover:scale-105">
+                    <div className="w-20 h-20 bg-background/80 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                      <Brain className="h-10 w-10 text-orange" />
                     </div>
                     <h3 className="text-xl font-bold mb-4">AI Companion</h3>
                     <p className="text-foreground/70">
@@ -911,64 +911,6 @@ export default function ProductPage() {
                     </p>
                   </div>
                 </ScrollReveal>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 bg-muted/30">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto">
-              <ScrollReveal>
-                <div className="text-center mb-12">
-                  <h2 className="text-3xl font-bold mb-6">Key Features</h2>
-                </div>
-              </ScrollReveal>
-              
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {[
-                  {
-                    icon: <Shield className="h-8 w-8 text-electric" />,
-                    title: "Content Protection",
-                    description: "Blocks harmful content across all platforms"
-                  },
-                  {
-                    icon: <Brain className="h-8 w-8 text-emerald" />,
-                    title: "AI Guidance",
-                    description: "Kid-friendly explanations and support"
-                  },
-                  {
-                    icon: <Users className="h-8 w-8 text-blue-500" />,
-                    title: "Parent Dashboard",
-                    description: "Real-time safety and focus insights"
-                  },
-                  {
-                    icon: <Lock className="h-8 w-8 text-purple-500" />,
-                    title: "Privacy First",
-                    description: "No ads, no data selling, secure by design"
-                  },
-                  {
-                    icon: <Heart className="h-8 w-8 text-pink-500" />,
-                    title: "Emotional Support",
-                    description: "Check-ins and coping strategies"
-                  },
-                  {
-                    icon: <School className="h-8 w-8 text-orange-500" />,
-                    title: "Learning Focus",
-                    description: "Study buddy and habit building"
-                  }
-                ].map((feature, index) => (
-                  <ScrollReveal key={index} delay={index * 0.1}>
-                    <div className="text-center">
-                      <div className="w-16 h-16 bg-background rounded-full flex items-center justify-center mx-auto mb-4">
-                        {feature.icon}
-                      </div>
-                      <h3 className="font-semibold mb-2">{feature.title}</h3>
-                      <p className="text-sm text-foreground/70">{feature.description}</p>
-                    </div>
-                  </ScrollReveal>
-                ))}
               </div>
             </div>
           </div>
@@ -986,11 +928,11 @@ export default function ProductPage() {
                   Join families worldwide who trust eRaksha to keep their children safe online
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
-                  <Button variant="glow" size="lg">
-                    <Link href="/pricing">Start Free Trial</Link>
+                  <Button variant="glow" size="lg" asChild>
+                    <Link href="https://chat.whatsapp.com/GPwdAcFrLhzFN69qIvPgV0?mode=wwt" target="_blank" rel="noopener noreferrer">Start Free Trial</Link>
                   </Button>
-                  <Button variant="outline" size="lg">
-                    <Link href="/schedule-demo">Schedule Demo</Link>
+                  <Button variant="outline" size="lg" asChild>
+                    <Link href="https://wa.me/919025867204?text=Hi,%20I%27d%20like%20to%20schedule%20a%20demo%20for%20eRaksha" target="_blank" rel="noopener noreferrer">Schedule Demo</Link>
                   </Button>
                 </div>
               </ScrollReveal>

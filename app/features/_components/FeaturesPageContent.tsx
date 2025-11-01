@@ -22,41 +22,47 @@ const FeaturePageContent = () => {
         "Advanced DNS filtering blocks pornography, scams, violence, and malware across all devices. Context-aware interventions warn, blur, block, and suggest safe alternatives automatically.",
       icon: LucideShield,
       color: "bg-electric",
+      shadowColor: "shadow-electric/30",
     },
     {
       title: "AI Child Companion",
       description:
         "Friendly AI companion explains blocked content in kid-friendly terms, provides emotional check-ins, study support, and builds positive digital habits through gamification.",
       icon: LucideBrain,
-      color: "bg-emerald",
+      color: "bg-bluePrimary",
+      shadowColor: "shadow-bluePrimary/30",
     },
     {
       title: "Parent Dashboard",
       description:
         "Comprehensive insights with Safety Score, Focus Score, and Emotional Balance Index. Real-time monitoring and family digital health guidance to support your child's growth.",
       icon: LucideBarChart,
-      color: "bg-electric",
+      color: "bg-orange",
+      shadowColor: "shadow-orange/30",
     },
     {
       title: "Privacy-First Design",
       description:
         "Zero ads, no data selling, end-to-end encryption for maximum family trust. Your child's data stays private and secure with industry-leading protection standards.",
       icon: LucideLock,
-      color: "bg-emerald",
+      color: "bg-blueLight",
+      shadowColor: "shadow-blueLight/30",
     },
     {
       title: "Safe Social Learning",
       description:
         "Moderated, private community where children learn, collaborate, and grow safely. Age-appropriate interactions with built-in safety controls and expert supervision.",
       icon: LucideUsers,
-      color: "bg-golden",
+      color: "bg-orangeLight",
+      shadowColor: "shadow-orangeLight/30",
     },
     {
       title: "School & NGO Integration",
       description:
         "Scalable B2B2C model empowering educational institutions to protect children at scale. Bulk licensing and custom deployment for schools and organizations.",
       icon: LucideTarget,
-      color: "bg-golden",
+      color: "bg-electric",
+      shadowColor: "shadow-electric/30",
     },
   ]
 
@@ -100,7 +106,7 @@ const FeaturePageContent = () => {
 </Head>
 
       {/* Hero Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-electric/10 via-emerald/10 to-golden/10">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-blueLight/15 via-background to-orangeLight/10">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -124,15 +130,24 @@ const FeaturePageContent = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
-                <TiltCard className="h-full" glareEnabled={true} tiltAmount={10}>
-                  <div className="p-8">
-                    <div className={`w-12 h-12 ${feature.color} rounded-xl flex items-center justify-center mb-6`}>
-                      <feature.icon className="h-6 w-6 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-                    <p className="text-foreground/80">{feature.description}</p>
+                <div className="group h-full bg-white border border-border/30 rounded-xl p-8 transition-all duration-500 ease-out cursor-pointer hover:scale-105 hover:shadow-[0_0_40px_-5px] hover:border-border/50"
+                  style={{
+                    boxShadow: 'none',
+                  }}
+                  onMouseEnter={(e) => {
+                    const shadowColor = feature.shadowColor.replace('shadow-', '').replace('/30', '')
+                    e.currentTarget.style.boxShadow = `0 0 40px -5px hsl(var(--${shadowColor}) / 0.3)`
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.boxShadow = 'none'
+                  }}
+                >
+                  <div className={`w-12 h-12 ${feature.color} rounded-xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110`}>
+                    <feature.icon className="h-6 w-6 text-white" />
                   </div>
-                </TiltCard>
+                  <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
+                  <p className="text-foreground/80">{feature.description}</p>
+                </div>
               </ScrollReveal>
             ))}
           </div>

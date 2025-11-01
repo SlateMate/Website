@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import Link from "next/link"
 import { Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -7,11 +8,16 @@ import { ScrollReveal } from "@/components/animations/scroll-reveal"
 import Head from "next/head"
 
 export function PricingPageContent() {
+  const [isYearly, setIsYearly] = useState(false)
+
   const plans = [
     {
       name: "Basic",
       price: "Free",
-      description: "Essential digital safety for one child",
+      monthlyPrice: "Free",
+      yearlyPrice: "Free",
+      originalYearlyPrice: null,
+      description: "Essential digital safety for 1 child",
       features: [
         "Basic DNS protection",
         "Simple content filtering", 
@@ -20,14 +26,17 @@ export function PricingPageContent() {
         "1 child profile",
         "Basic AI companion"
       ],
-      cta: "Get Started Free",
+      cta: "Join Community",
+      ctaLink: "https://chat.whatsapp.com/GPwdAcFrLhzFN69qIvPgV0?mode=wwt",
       popular: false,
+      gradient: "white",
     },
     {
       name: "Standard",
-      price: "₹299",
-      period: "/month/child",
-      description: "Complete protection & AI companion",
+      monthlyPrice: "₹299",
+      yearlyPrice: "₹2,990",
+      originalYearlyPrice: "₹3,588",
+      description: "Complete protection & AI companion for 1 child",
       features: [
         "Advanced DNS protection",
         "Real-time AI companion",
@@ -36,16 +45,19 @@ export function PricingPageContent() {
         "24/7 content monitoring",
         "Habit building tools",
         "Email & chat support",
-        "Up to 3 child profiles"
+        "1 child profile"
       ],
-      cta: "Start Free Trial",
+      cta: "Join Community",
+      ctaLink: "https://chat.whatsapp.com/GPwdAcFrLhzFN69qIvPgV0?mode=wwt",
       popular: true,
+      gradient: "blue",
     },
     {
       name: "Premium", 
-      price: "₹599",
-      period: "/month/child",
-      description: "Advanced family digital wellness",
+      monthlyPrice: "₹599",
+      yearlyPrice: "₹5,990",
+      originalYearlyPrice: "₹7,188",
+      description: "Advanced family digital wellness for 1 child",
       features: [
         "Everything in Standard",
         "Advanced AI mentoring",
@@ -54,11 +66,13 @@ export function PricingPageContent() {
         "Custom content filters",
         "School integration",
         "Priority support",
-        "Unlimited child profiles",
+        "1 child profile",
         "Family coaching sessions"
       ],
-      cta: "Start Free Trial",
+      cta: "Join Community",
+      ctaLink: "https://chat.whatsapp.com/GPwdAcFrLhzFN69qIvPgV0?mode=wwt",
       popular: false,
+      gradient: "orange",
     },
   ]
 
@@ -133,15 +147,39 @@ export function PricingPageContent() {
       </Head>
 
       {/* Header */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-electric/10 to-emerald/10">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-blueLight/15 via-background to-orangeLight/10">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl font-bold mb-6">
               <span className="bg-gradient-to-r from-electric to-emerald bg-clip-text text-transparent">eRaksha</span> Pricing Plans
             </h1>
-            <p className="text-xl mb-8 text-foreground/80">
+            <p className="text-xl mb-6 text-foreground/80">
               Protect your child's digital journey with transparent, family-friendly pricing.
             </p>
+            <p className="text-sm text-foreground/60 mb-8">All plans are for 1 child</p>
+            
+            {/* Monthly/Yearly Toggle */}
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <span className={`text-lg font-medium transition-colors ${!isYearly ? 'text-foreground' : 'text-foreground/50'}`}>
+                Monthly
+              </span>
+              <button
+                onClick={() => setIsYearly(!isYearly)}
+                className={`relative w-16 h-8 rounded-full transition-colors ${isYearly ? 'bg-electric' : 'bg-muted-foreground/30'}`}
+              >
+                <span
+                  className={`absolute top-1 left-1 w-6 h-6 bg-white rounded-full transition-transform ${isYearly ? 'translate-x-8' : 'translate-x-0'}`}
+                />
+              </button>
+              <span className={`text-lg font-medium transition-colors ${isYearly ? 'text-foreground' : 'text-foreground/50'}`}>
+                Yearly
+              </span>
+              {isYearly && (
+                <span className="text-sm bg-emerald/20 text-emerald px-3 py-1 rounded-full font-semibold">
+                  Save 17%
+                </span>
+              )}
+            </div>
           </div>
         </div>
       </section>
@@ -150,47 +188,81 @@ export function PricingPageContent() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {plans.map((plan, index) => (
-              <ScrollReveal key={index} delay={index * 0.1}>
-                <div
-                  className={`relative rounded-xl p-8 h-full transition-all duration-300 bg-card 
-                    ${plan.popular ? "shadow-lg border-2 border-electric" : "border shadow-sm hover:shadow-md hover:border-electric/30"}
-                  `}
-                >
-                  {plan.popular && (
-                    <div className="absolute top-0 right-0 bg-electric text-white px-3 py-1 text-xs font-semibold rounded-bl-lg rounded-tr-lg">
-                      Most Popular
-                    </div>
-                  )}
+            {plans.map((plan, index) => {
+              const currentPrice = isYearly ? plan.yearlyPrice : plan.monthlyPrice
+              const showOriginalPrice = isYearly && plan.originalYearlyPrice
+              
+              return (
+                <ScrollReveal key={index} delay={index * 0.1}>
+                  <div
+                    className={`relative rounded-xl p-8 h-full transition-all duration-300 border bg-white
+                      ${plan.gradient === 'blue'
+                        ? 'hover:shadow-2xl shadow-xl border-electric/50'
+                        : plan.gradient === 'orange'
+                        ? 'hover:shadow-2xl shadow-lg border-orange/40'
+                        : 'hover:shadow-lg shadow-sm border-border'
+                      }
+                      ${plan.popular ? "border-2 border-electric scale-105" : ""}
+                    `}
+                  >
+                    {plan.popular && (
+                      <div className="absolute top-0 right-0 bg-gradient-to-r from-bluePrimary to-electric text-white px-3 py-1 text-xs font-semibold rounded-bl-lg rounded-tr-lg">
+                        Most Popular
+                      </div>
+                    )}
 
-                  <div>
-                    <h3 className="text-xl font-bold mb-2">{plan.name}</h3>
-                    <div className="mb-4">
-                      <span className="text-4xl font-bold">{plan.price}</span>
-                      {plan.period && <span className="text-foreground/70">{plan.period}</span>}
-                    </div>
-                    <p className="text-foreground/80 mb-6">{plan.description}</p>
-
-                    <ul className="space-y-3 mb-8">
-                      {plan.features.map((feature, i) => (
-                        <li key={i} className="flex items-start">
-                          <div className="mr-3 h-5 w-5 flex-shrink-0 rounded-full bg-emerald/20 text-emerald flex items-center justify-center mt-0.5">
-                            <Check className="h-3 w-3" />
+                    <div>
+                      <h3 className="text-xl font-bold mb-2">{plan.name}</h3>
+                      <div className="mb-4">
+                        {showOriginalPrice && (
+                          <div className="text-lg text-foreground/50 line-through">
+                            {plan.originalYearlyPrice}
                           </div>
-                          <span className="text-foreground/90">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                        )}
+                        <div className="flex items-baseline gap-2">
+                          <span className="text-4xl font-bold">{currentPrice}</span>
+                          {currentPrice !== "Free" && (
+                            <span className="text-foreground/70">/{isYearly ? 'year' : 'month'}</span>
+                          )}
+                        </div>
+                      </div>
+                      <p className="text-foreground/80 mb-6">{plan.description}</p>
 
-                  <div className="mt-auto">
-                    <Button variant={plan.popular ? "glow" : "default"} className="w-full">
-                      {plan.cta}
-                    </Button>
+                      <ul className="space-y-3 mb-8">
+                        {plan.features.map((feature, i) => (
+                          <li key={i} className="flex items-start">
+                            <div className="mr-3 h-5 w-5 flex-shrink-0 rounded-full bg-emerald/20 text-emerald flex items-center justify-center mt-0.5">
+                              <Check className="h-3 w-3" />
+                            </div>
+                            <span className="text-foreground/90">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="mt-auto">
+                      <Button 
+                        variant={plan.popular ? "glow" : "default"} 
+                        className={`w-full ${
+                          plan.gradient === 'blue' 
+                            ? 'bg-gradient-to-r from-bluePrimary to-electric text-white hover:opacity-90' 
+                            : plan.gradient === 'orange'
+                            ? 'bg-gradient-to-r from-orange to-orangeLight text-white hover:opacity-90'
+                            : ''
+                        }`}
+                        asChild={!!plan.ctaLink}
+                      >
+                        {plan.ctaLink ? (
+                          <Link href={plan.ctaLink} target="_blank" rel="noopener noreferrer">{plan.cta}</Link>
+                        ) : (
+                          <span>{plan.cta}</span>
+                        )}
+                      </Button>
+                    </div>
                   </div>
-                </div>
-              </ScrollReveal>
-            ))}
+                </ScrollReveal>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -230,14 +302,14 @@ export function PricingPageContent() {
                 Start with our free Basic plan or get full protection with a 14-day free trial.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Button variant="glow" size="lg">
-                  <Link href="/schedule-demo" className="flex items-center">
+                <Button variant="glow" size="lg" asChild>
+                  <Link href="https://chat.whatsapp.com/GPwdAcFrLhzFN69qIvPgV0?mode=wwt" target="_blank" rel="noopener noreferrer" className="flex items-center">
                     Start Free Trial
                   </Link>
                 </Button>
-                <Button variant="outline" size="lg">
-                  <Link href="/features" className="flex items-center">
-                    Learn More About eRaksha
+                <Button variant="outline" size="lg" asChild>
+                  <Link href="https://wa.me/919025867204?text=Hi,%20I%27d%20like%20to%20schedule%20a%20demo%20for%20eRaksha" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                    Schedule Demo
                   </Link>
                 </Button>
               </div>

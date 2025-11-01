@@ -4,48 +4,29 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 215 25% 17%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 17%;
+    --card-foreground: 0 0% 0%;
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 17%;
-    --primary: 215 25% 17%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 100% 50%;
-    --secondary-foreground: 210 40% 98%;
-    --accent: 143 72% 40%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215 25% 40%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 215 25% 17%;
-    --radius: 1rem;
-  }
-
-  .dark {
-    --background: 240 10% 4%;
-    --foreground: 0 0% 100%;
-    --card: 240 10% 6%;
-    --card-foreground: 0 0% 100%;
-    --popover: 215 25% 17%;
-    --popover-foreground: 0 0% 100%;
-    --primary: 240 10% 10%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 210 100% 50%;
-    --secondary-foreground: 0 0% 100%;
-    --accent: 143 72% 40%;
-    --accent-foreground: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 30 95% 68%;
+    --secondary-foreground: 0 0% 0%;
+    --accent: 225 99% 70%;
+    --accent-foreground: 0 0% 0%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 0 0% 40%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 225 99% 70%;
+    --radius: 1rem;
+    --orange-light: 30 95% 68%;
+    --blue-primary: 225 99% 70%;
+    --blue-light: 213 93% 78%;
   }
 }
 
@@ -203,4 +184,62 @@
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee2 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee2 {
+  animation: marquee2 25s linear infinite;
+}
+
+/* Blob animation for fluid gradient effect */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  25% {
+    transform: translate(100px, -80px) scale(1.2);
+  }
+  50% {
+    transform: translate(-80px, 100px) scale(0.8);
+  }
+  75% {
+    transform: translate(80px, 50px) scale(1.1);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 10s infinite ease-in-out;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
 }

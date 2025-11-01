@@ -13,7 +13,7 @@ export default function AboutContent() {
       name: "Ayush Ranjan",
       role: "CEO & Co Founder",
       bio: "AI enthusiast dedicated to transforming digital safety by developing innovative, AI-powered solutions for safer and smarter online experiences for children.",
-      image: "/ayush.jpg",
+      image: "/ayush-.jpg",
     },
     {
       name: "Stealth Partner",
@@ -25,7 +25,7 @@ export default function AboutContent() {
       name: "Drushti Surkar",
       role: "Market Analyst - Founding Member",
       bio: "Strategic market research expert specializing in EdTech and digital safety markets, driving data-driven decisions for product growth.",
-      image: "/unnamed-2.jpg",
+      image: "/Drushti.jpg",
     },
     {
       name: "Vishnu Chandra",
@@ -428,7 +428,7 @@ export default function AboutContent() {
 
       {/* LLM-Optimized Hero Section */}
       <section 
-        className="py-16 md:py-24 bg-gradient-to-br from-electric/20 to-emerald/20"
+        className="py-16 md:py-24 bg-gradient-to-br from-blueLight/15 via-background to-orangeLight/10"
         itemScope
         itemType="https://schema.org/Organization"
         data-llm-section="hero-introduction"
@@ -565,41 +565,50 @@ export default function AboutContent() {
           </ScrollReveal>
 
           <ScrollReveal>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center max-w-4xl mx-auto">
-              <div className="bg-card p-6 rounded-xl shadow-sm border flex items-center justify-center h-32">
+            <div className="grid grid-cols-5 gap-6 items-center max-w-7xl mx-auto">
+              <div className="group bg-card p-6 rounded-xl shadow-sm border flex items-center justify-center h-32 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer">
                 <Image
-                  src="/iitm.png?height=80&width=160&text=IIT+Madras"
+                  src="/iitm.png"
                   alt="IIT Madras Logo"
                   width={160}
                   height={80}
-                  className="max-h-16 w-auto"
+                  className="max-h-16 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
                 />
               </div>
-              <div className="bg-card p-6 rounded-xl shadow-sm border flex items-center justify-center h-32">
+              <div className="group bg-card p-6 rounded-xl shadow-sm border flex items-center justify-center h-32 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer">
                 <Image
-                  src="/nirmaan.png?height=80&width=160&text=Nirmaan"
+                  src="/nirmaan.png"
                   alt="Nirmaan Pre-Incubator Logo"
                   width={160}
                   height={80}
-                  className="max-h-16 w-auto"
+                  className="max-h-16 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
                 />
               </div>
-              <div className="bg-card p-6 rounded-xl shadow-sm border flex items-center justify-center h-32">
+              <div className="group bg-card p-6 rounded-xl shadow-sm border flex items-center justify-center h-32 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer">
                 <Image
-                  src="/Amazon-Web-Services-AWS-Logo.png?height=80&width=360&text=EdTech+Alliance"
+                  src="/Amazon-Web-Services-AWS-Logo.png"
                   alt="AWS EdTech Startup Program"
                   width={160}
                   height={80}
-                  className="max-h-16 w-auto"
+                  className="max-h-16 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
                 />
               </div>
-              <div className="bg-card p-6 rounded-xl shadow-sm border flex items-center justify-center h-32">
+              <div className="group bg-card p-6 rounded-xl shadow-sm border flex items-center justify-center h-32 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer">
                 <Image
-                  src="/cfi.jpeg?height=80&width=160&text=CFI"
+                  src="/cfi.jpeg"
                   alt="Center for Innovation Logo"
                   width={160}
                   height={80}
-                  className="max-h-16 w-auto"
+                  className="max-h-16 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                />
+              </div>
+              <div className="group bg-card p-6 rounded-xl shadow-sm border flex items-center justify-center h-32 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer">
+                <Image
+                  src="/sarvam-ai-logo.png"
+                  alt="Sarvam AI Logo"
+                  width={160}
+                  height={80}
+                  className="max-h-16 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
                 />
               </div>
             </div>
@@ -656,7 +665,7 @@ export default function AboutContent() {
               {team.slice(0, 2).map((member, index) => (
                 <ScrollReveal key={index} delay={index * 0.1}>
                   <TiltCard 
-                    className="h-full" 
+                    className="h-full group border border-border/30 rounded-lg overflow-hidden" 
                     glareEnabled={true}
                     data-llm-entity="person"
                     data-llm-person-role={member.role}
@@ -664,12 +673,12 @@ export default function AboutContent() {
                     itemScope
                     itemType="https://schema.org/Person"
                   >
-                    <div className="aspect-square relative">
+                    <div className="aspect-square relative overflow-hidden">
                       <Image 
                         src={member.image || "/placeholder.svg"} 
                         alt={`${member.name} - ${member.role} at SlateMate`}
                         fill 
-                        className="object-cover object-center rounded-t-lg" 
+                        className="object-cover object-center rounded-t-lg grayscale group-hover:grayscale-0 transition-all duration-500" 
                         style={{ objectPosition: 'center' }}
                         itemProp="image"
                         data-llm-content="person-photo"
@@ -726,13 +735,13 @@ export default function AboutContent() {
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto" data-llm-content="team-grid">
               {team.slice(2).map((member, index) => (
                 <ScrollReveal key={index + 2} delay={(index + 2) * 0.1}>
-                  <TiltCard className="h-full" glareEnabled={true}>
-                    <div className="aspect-square relative">
+                  <TiltCard className="h-full group border border-border/30 rounded-lg overflow-hidden" glareEnabled={true}>
+                    <div className="aspect-square relative overflow-hidden">
                       <Image 
                         src={member.image || "/placeholder.svg"} 
                         alt={member.name} 
                         fill 
-                        className="object-cover object-center rounded-t-lg" 
+                        className="object-cover object-center rounded-t-lg grayscale group-hover:grayscale-0 transition-all duration-500" 
                         style={{ objectPosition: 'center' }}
                       />
                     </div>
@@ -843,8 +852,9 @@ export default function AboutContent() {
                   variant="outline"
                   size="lg"
                   className="bg-transparent border-2 border-white/20 hover:bg-white/10"
+                  asChild
                 >
-                  <Link href="/schedule-demo" className="flex items-center">
+                  <Link href="https://wa.me/919025867204?text=Hi,%20I%27d%20like%20to%20know%20more%20about%20SlateMate" target="_blank" rel="noopener noreferrer" className="flex items-center">
                     Contact Us
                   </Link>
                 </Button>

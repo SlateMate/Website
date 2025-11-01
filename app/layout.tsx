@@ -1,5 +1,5 @@
 import { Suspense } from "react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Poppins } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -14,6 +14,12 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
   variable: "--font-poppins",
 })
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#FFFFFF",
+}
 
 export const metadata: Metadata = {
   title: {
@@ -121,7 +127,6 @@ export const metadata: Metadata = {
   creator: "SlateMate Team",
   publisher: "SlateMate",
   category: "education",
-  themeColor: "#1E2A38",
   other: {
     // Global LLM Optimization
     "ai-website-type": "child-safety-platform",
@@ -146,10 +151,10 @@ export const metadata: Metadata = {
     "apple-mobile-web-app-capable": "yes",
     "apple-mobile-web-app-status-bar-style": "default",
     "apple-mobile-web-app-title": "eRaksha Safety",
-    "msapplication-TileColor": "#1E2A38",
+    "msapplication-TileColor": "#FFFFFF",
     "msapplication-tooltip": "eRaksha - Child Digital Safety",
-    "theme-color": "#1E2A38",
-    "color-scheme": "light dark",
+    "theme-color": "#FFFFFF",
+    "color-scheme": "light",
     "language": "en-IN",
     "content-language": "en-IN",
     "geo.region": "IN",
@@ -177,8 +182,6 @@ export default function RootLayout({
     >
       <head>
         <meta charSet="utf-8" />
-        <meta name="theme-color" content="#1E2A38" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>SlateMate | AI for Safer Digital Learning</title>
         
         {/* Global Structured Data */}
@@ -330,8 +333,8 @@ export default function RootLayout({
 
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="light"
+          enableSystem={false}
           disableTransitionOnChange
         >
           <div className="relative flex min-h-screen flex-col">

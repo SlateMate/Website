@@ -205,7 +205,7 @@ export function Footer() {
                 </div>
               </li>
               <div className="mt-6 pt-6 border-t border-primary-foreground/10">
-                <h4 className="text-sm font-semibold mb-3">Join our waitlist</h4>
+                <h4 className="text-sm font-semibold mb-3">Subscribe to our newsletter</h4>
                 <WaitlistForm variant="dark" />
               </div>
             </ul>
