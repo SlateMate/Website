@@ -89,7 +89,7 @@ export function Navbar() {
               data-llm-brand="SlateMate"
             >
               <Image
-                src="/slatemate-logo.png"
+                src="/SlateMate-logo.png"
                 alt="SlateMate"
                 width={160}
                 height={32}
