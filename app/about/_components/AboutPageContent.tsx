@@ -46,10 +46,10 @@ export default function AboutContent() {
       image: "/sanjay.jpg",
     },
     {
-      name: "Riheb Zaidi",
+      name: "Rihab Zaidi",
       role: "Founding Member",
       bio: "Software developer focused on building secure, reliable, and child-friendly interfaces that make digital safety accessible for families.",
-      image: "/unnamed-7.jpg",
+      image: "/rihab.jpg",
     },
 
     {
@@ -664,14 +664,16 @@ export default function AboutContent() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
               {team.slice(0, 2).map((member, index) => (
                 <ScrollReveal key={index} delay={index * 0.1}>
-                  <TiltCard 
-                    className="h-full group border border-border/30 rounded-lg overflow-hidden" 
-                    glareEnabled={true}
+                  <div
+                    itemScope
+                    itemType="https://schema.org/Person"
                     data-llm-entity="person"
                     data-llm-person-role={member.role}
                     data-llm-person-name={member.name}
-                    itemScope
-                    itemType="https://schema.org/Person"
+                  >
+                  <TiltCard 
+                    className="h-full group border border-border/30 rounded-lg overflow-hidden" 
+                    glareEnabled={true}
                   >
                     <div className="aspect-square relative overflow-hidden">
                       <Image 
@@ -718,6 +720,7 @@ export default function AboutContent() {
                       </div>
                     </div>
                   </TiltCard>
+                  </div>
                 </ScrollReveal>
               ))}
             </div>

@@ -103,7 +103,7 @@ export default function FAQ() {
     ]
   }
 
-  const FAQItem = ({ question, answer, emoji }: { question: string; answer: string | JSX.Element; emoji?: string }) => (
+  const FAQItem = ({ question, answer, emoji }: { question: string; answer: string | React.ReactNode; emoji?: string }) => (
     <div className="mb-6 bg-card p-6 rounded-lg border border-border/30 hover:shadow-lg transition-all duration-300">
       <h3 className="text-lg font-semibold mb-3 text-foreground flex items-start gap-2">
         {emoji && <span className="text-xl">{emoji}</span>}

@@ -155,8 +155,8 @@ export default function Home() {
       >
         {/* Animated Gradient Blobs */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 -left-32 w-[500px] h-[500px] bg-gradient-to-br from-blueLight/40 to-bluePrimary/30 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
-          <div className="absolute top-40 -right-32 w-[500px] h-[500px] bg-gradient-to-br from-orangeLight/40 to-orange/30 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+          <div className="absolute top-20 -left-32 w-[500px] h-[500px] bg-gradient-to-br from-blueLight/40 to-bluePrimary/30 rounded-full mix-blend-multiply filter blur-[128px] opacity-70 animate-blob"></div>
+          <div className="absolute top-40 -right-64 w-[500px] h-[500px] bg-gradient-to-br from-orangeLight/40 to-orange/30 rounded-full mix-blend-multiply filter blur-[128px] opacity-70 animate-blob animation-delay-2000"></div>
         </div>
         <div className="container mx-auto px-4 py-20 relative z-10">
           <ScrollReveal>
