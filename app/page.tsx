@@ -155,10 +155,10 @@ export default function Home() {
       >
         {/* Animated Gradient Blobs */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 -left-32 w-[500px] h-[500px] bg-gradient-to-br from-blueLight/40 to-bluePrimary/30 rounded-full mix-blend-multiply filter blur-[128px] opacity-70 animate-blob"></div>
-          <div className="absolute top-40 -right-64 w-[500px] h-[500px] bg-gradient-to-br from-orangeLight/40 to-orange/30 rounded-full mix-blend-multiply filter blur-[128px] opacity-70 animate-blob animation-delay-2000"></div>
+          <div className="absolute top-20 -left-32 w-[500px] h-[500px] bg-gradient-to-br from-blueLight/40 to-bluePrimary/30 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+          <div className="absolute top-40 -right-32 w-[500px] h-[500px] bg-gradient-to-br from-orangeLight/40 to-orange/30 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
         </div>
-        <div className="container mx-auto px-4 py-20 relative z-10">
+        <div className="container mx-auto px-4 py-20 -mt-32 relative z-10">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center" data-llm-content="value-proposition">
               <h1 
@@ -208,26 +208,38 @@ export default function Home() {
         </div>
       </section>
 
-{/* Partners Marquee Strip */}
-<section className="py-8 bg-muted/30 border-y border-border/50 overflow-hidden">
-  <div className="container mx-auto px-4">
-    <p className="text-center text-sm text-muted-foreground mb-6">Trusted by leading organizations</p>
+{/* Partners Marquee Strip - Full Screen */}
+<section className="py-6 -mt-40 bg-muted/30 border-y border-border/50 overflow-hidden">
+  <div className="w-full">
+    <p className="text-center text-sm text-muted-foreground mb-4">Trusted by leading organizations</p>
     <div className="relative flex overflow-x-hidden">
       <div className="animate-marquee whitespace-nowrap flex items-center gap-12">
-        <span className="text-2xl font-semibold text-muted-foreground/70">IIT Madras</span>
-        <span className="text-2xl font-semibold text-muted-foreground/70">Nirmaan</span>
-        <span className="text-2xl font-semibold text-muted-foreground/70">AWS</span>
-        <span className="text-2xl font-semibold text-muted-foreground/70">SarvamAI</span>
-        <span className="text-2xl font-semibold text-muted-foreground/70">MongoDB</span>
-        <span className="text-2xl font-semibold text-muted-foreground/70 mr-12">Atlassian</span>
+        <span className="text-xl md:text-2xl font-semibold text-muted-foreground/70">IIT Madras</span>
+        <span className="text-xl md:text-2xl font-semibold text-muted-foreground/70">Nirmaan</span>
+        <span className="text-xl md:text-2xl font-semibold text-muted-foreground/70">AWS</span>
+        <span className="text-xl md:text-2xl font-semibold text-muted-foreground/70">SarvamAI</span>
+        <span className="text-xl md:text-2xl font-semibold text-muted-foreground/70">MongoDB</span>
+        <span className="text-xl md:text-2xl font-semibold text-muted-foreground/70">Atlassian</span>
+        <span className="text-xl md:text-2xl font-semibold text-muted-foreground/70">IIT Madras</span>
+        <span className="text-xl md:text-2xl font-semibold text-muted-foreground/70">Nirmaan</span>
+        <span className="text-xl md:text-2xl font-semibold text-muted-foreground/70">AWS</span>
+        <span className="text-xl md:text-2xl font-semibold text-muted-foreground/70">SarvamAI</span>
+        <span className="text-xl md:text-2xl font-semibold text-muted-foreground/70">MongoDB</span>
+        <span className="text-xl md:text-2xl font-semibold text-muted-foreground/70 mr-12">Atlassian</span>
       </div>
       <div className="absolute top-0 animate-marquee2 whitespace-nowrap flex items-center gap-12">
-        <span className="text-2xl font-semibold text-muted-foreground/70">IIT Madras</span>
-        <span className="text-2xl font-semibold text-muted-foreground/70">Nirmaan</span>
-        <span className="text-2xl font-semibold text-muted-foreground/70">AWS</span>
-        <span className="text-2xl font-semibold text-muted-foreground/70">SarvamAI</span>
-        <span className="text-2xl font-semibold text-muted-foreground/70">MongoDB</span>
-        <span className="text-2xl font-semibold text-muted-foreground/70 mr-12">Atlassian</span>
+        <span className="text-xl md:text-2xl font-semibold text-muted-foreground/70">IIT Madras</span>
+        <span className="text-xl md:text-2xl font-semibold text-muted-foreground/70">Nirmaan</span>
+        <span className="text-xl md:text-2xl font-semibold text-muted-foreground/70">AWS</span>
+        <span className="text-xl md:text-2xl font-semibold text-muted-foreground/70">SarvamAI</span>
+        <span className="text-xl md:text-2xl font-semibold text-muted-foreground/70">MongoDB</span>
+        <span className="text-xl md:text-2xl font-semibold text-muted-foreground/70">Atlassian</span>
+        <span className="text-xl md:text-2xl font-semibold text-muted-foreground/70">IIT Madras</span>
+        <span className="text-xl md:text-2xl font-semibold text-muted-foreground/70">Nirmaan</span>
+        <span className="text-xl md:text-2xl font-semibold text-muted-foreground/70">AWS</span>
+        <span className="text-xl md:text-2xl font-semibold text-muted-foreground/70">SarvamAI</span>
+        <span className="text-xl md:text-2xl font-semibold text-muted-foreground/70">MongoDB</span>
+        <span className="text-xl md:text-2xl font-semibold text-muted-foreground/70 mr-12">Atlassian</span>
       </div>
     </div>
   </div>
@@ -275,37 +287,6 @@ export default function Home() {
               <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
               <p className="text-foreground/80">{benefit.description}</p>
             </div>
-          </div>
-        </ScrollReveal>
-      ))}
-    </div>
-  </div>
-</section>
-
-{/* Stats Section */}
-<section className="py-20">
-  <div className="container mx-auto px-6">
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-      {[
-        { prefix: "", value: 60, suffix: "%", label: "Children encounter harmful content before 16", gradient: "blue" },
-        { prefix: "", value: 250, suffix: "M+", label: "Young internet users in India by 2025", gradient: "orange" },
-        { prefix: "", value: 85, suffix: "%", label: "Parents struggling with unsafe screen time", gradient: "blue" },
-        { prefix: "", value: 10, suffix: "K+", label: "Families we aim to protect in Year 1", gradient: "orange" },
-      ].map((stat, index) => (
-        <ScrollReveal key={index} delay={index * 0.1}>
-          <div 
-            className={`group text-center p-6 rounded-xl border transition-all duration-500 ease-out cursor-pointer
-              ${stat.gradient === "blue" 
-                ? "bg-background hover:bg-gradient-to-br hover:from-white hover:via-blueLight/20 hover:to-white border-blueLight/30 hover:border-electric/40 hover:shadow-[0_0_30px_-5px_rgba(115,158,254,0.3)]" 
-                : "bg-background hover:bg-gradient-to-br hover:from-white hover:via-orangeLight/20 hover:to-white border-blueLight/30 hover:border-orange/40 hover:shadow-[0_0_30px_-5px_rgba(249,189,96,0.3)]"
-              }`}
-            data-llm-content="statistics"
-            data-llm-entity="metric"
-            itemScope
-            itemType="https://schema.org/Statistic"
-          >
-            <Counter prefix={stat.prefix} end={stat.value} suffix={stat.suffix} duration={2000} />
-            <p className="mt-2 text-foreground/70" itemProp="description">{stat.label}</p>
           </div>
         </ScrollReveal>
       ))}
