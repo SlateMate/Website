@@ -158,18 +158,14 @@ export default function BlogPage() {
               <ScrollReveal key={post.id} delay={index * 0.1}>
                 <Link href={`/blog/${post.id}`}>
                   <div className={`group bg-gradient-to-br ${post.gradient} p-6 rounded-xl border border-border/30 hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer h-full flex flex-col`}>
-                    {/* Image Placeholder */}
+                    {/* Image */}
                     <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden bg-muted">
-                      <div className="absolute inset-0 flex items-center justify-center text-foreground/30">
-                        <BookOpen className="h-16 w-16" />
-                      </div>
-                      {/* Image will be added later */}
-                      {/* <Image 
+                      <Image 
                         src={post.image} 
                         alt={post.title}
                         fill
                         className="object-cover"
-                      /> */}
+                      />
                     </div>
 
                     {/* Category Badge */}

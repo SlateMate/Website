@@ -16,10 +16,10 @@ export default function AboutContent() {
       image: "/ayush-.jpg",
     },
     {
-      name: "Stealth Partner",
+      name: "Manan Soni",
       role: "CTO & Co Founder",
       bio: "Technology visionary focused on building scalable AI systems and robust infrastructure for child digital safety and family digital wellness.",
-      image: "/unnamed-69.png",
+      image: "/manan.jpg",
     },
     {
       name: "Drushti Surkar",
@@ -35,15 +35,15 @@ export default function AboutContent() {
     },
     {
       name: "Tanisha Agarwal",
-      role: "Developer",
+      role: "Founding Member",
       bio: "Full-stack developer building robust and scalable solutions for eRaksha's digital safety platform with focus on performance and user experience.",
-      image: "/unnamed-4.jpg",
+      image: "/tanisha.jpg",
     },
     {
       name: "Sanjay Kuppusamy Saravanan",
       role: "Founding Member",
       bio: "AI/ML specialist developing intelligent algorithms for content filtering, behavioral analysis, and the AI companion features that make eRaksha unique.",
-      image: "/unnamed-6.jpg",
+      image: "/sanjay.jpg",
     },
     {
       name: "Riheb Zaidi",
@@ -56,7 +56,7 @@ export default function AboutContent() {
       name: "Ekta Chopra",
       role: "Founding Member",
       bio: "Executive leadership coordinator streamlining operations and strategic planning to accelerate SlateMate's mission of child digital safety.",
-      image: "/unnamed.jpg",
+      image: "/ekta.jpg",
     },
   ]
 
@@ -565,7 +565,7 @@ export default function AboutContent() {
           </ScrollReveal>
 
           <ScrollReveal>
-            <div className="grid grid-cols-5 gap-6 items-center max-w-7xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 items-center max-w-7xl mx-auto">
               <div className="group bg-card p-6 rounded-xl shadow-sm border flex items-center justify-center h-32 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer">
                 <Image
                   src="/iitm.png"

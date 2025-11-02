@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { ScrollReveal } from "@/components/animations/scroll-reveal"
 import { Calendar, ArrowLeft, Share2, BookOpen } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import { notFound } from "next/navigation"
 
 type BlogPost = {
@@ -453,8 +454,9 @@ export async function generateStaticParams() {
   }))
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const post = blogPosts[params.slug]
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const post = blogPosts[slug]
   
   if (!post) {
     return {
@@ -474,8 +476,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = blogPosts[params.slug]
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const post = blogPosts[slug]
 
   if (!post) {
     notFound()
@@ -524,13 +527,16 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       <section className="py-16">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
-            {/* Featured Image Placeholder */}
+            {/* Featured Image */}
             <ScrollReveal>
-              <div className="relative w-full h-96 mb-12 rounded-xl overflow-hidden bg-muted">
-                <div className="absolute inset-0 flex items-center justify-center text-foreground/30">
-                  <BookOpen className="h-24 w-24" />
-                </div>
-                {/* Image will be added later */}
+              <div className="relative w-full h-96 mb-12 rounded-xl overflow-hidden bg-gradient-to-br from-blueLight/20 via-background to-orangeLight/20 border border-border/30">
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
             </ScrollReveal>
 

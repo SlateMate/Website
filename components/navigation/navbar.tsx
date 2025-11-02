@@ -166,62 +166,68 @@ export function Navbar() {
         </div>
       </header>
 
-      {/* Mobile Menu - Simplified Implementation */}
-      {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-50 md:hidden">
-          {/* Backdrop */}
-          <div className="fixed inset-0 bg-black/50" onClick={() => setIsMobileMenuOpen(false)} />
+      {/* Mobile Menu - Dropdown Style */}
+      <motion.div
+        initial={false}
+        animate={{ 
+          height: isMobileMenuOpen ? "auto" : 0,
+          opacity: isMobileMenuOpen ? 1 : 0
+        }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+        className="fixed top-24 left-1/2 -translate-x-1/2 w-[90%] max-w-3xl z-30 md:hidden overflow-hidden"
+      >
+        <div className="bg-background/80 backdrop-blur-xl rounded-2xl border border-border/30 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
+          <nav className="p-6 flex flex-col gap-2">
+            {navItems.map((item) => {
+              if (item.children) {
+                return (
+                  <div key={item.title} className="space-y-2">
+                    <div className="font-semibold text-foreground text-center py-2">{item.title}</div>
+                    <div className="space-y-2">
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.title}
+                          href={child.href}
+                          className="block py-2 text-center text-muted-foreground hover:text-blue-primary transition-colors rounded-lg hover:bg-blue-primary/5"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          {child.title}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )
+              }
 
-          {/* Menu */}
-          <div className="fixed right-0 top-0 h-full w-[280px] bg-background overflow-y-auto">
-            <div className="p-6 pt-16">
-              <nav className="flex flex-col gap-4">
-                {navItems.map((item) => {
-                  if (item.children) {
-                    return (
-                      <div key={item.title} className="space-y-2">
-                        <div className="font-medium">{item.title}</div>
-                        <div className="pl-4 border-l border-border space-y-2">
-                          {item.children.map((child) => (
-                            <Link
-                              key={child.title}
-                              href={child.href}
-                              className="block py-1 text-muted-foreground hover:text-foreground"
-                              onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                              {child.title}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    )
-                  }
-
-                  return (
-                    <Link
-                      key={item.title}
-                      href={item.href}
-                      className={`py-2 text-base font-medium ${
-                        pathname === item.href ? "text-foreground" : "text-muted-foreground hover:text-foreground"
-                      }`}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      {item.title}
-                    </Link>
-                  )
-                })}
-              </nav>
-
-              <div className="mt-8">
-                <Button variant="glow" className="w-full" asChild>
-                  <Link href="/login" onClick={() => setIsMobileMenuOpen(false)}>
-                    Login
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </div>
+              return (
+                <Link
+                  key={item.title}
+                  href={item.href}
+                  className={`py-3 px-4 rounded-xl text-base font-medium text-center transition-all duration-300 ${
+                    pathname === item.href 
+                      ? "bg-gradient-to-r from-blue-primary/20 to-electric/20 text-blue-primary border border-blue-primary/30" 
+                      : "text-foreground hover:bg-background/60 border border-transparent hover:border-border/30"
+                  }`}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.title}
+                </Link>
+              )
+            })}
+          </nav>
         </div>
+      </motion.div>
+
+      {/* Backdrop for mobile menu */}
+      {isMobileMenuOpen && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
+          className="fixed inset-0 bg-black/20 backdrop-blur-sm z-20 md:hidden"
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
       )}
     </>
   )
