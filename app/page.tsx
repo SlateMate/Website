@@ -7,7 +7,7 @@ import { Counter } from "@/components/animations/counter"
 import { PilotForm } from "@/components/forms/pilot-form"
 
 export const metadata: Metadata = {
-  title: "SlateMate eRaksha - AI Child Safety Platform | Digital Protection for Kids India | Parental Control 2024",
+  title: "SlateMate eRaksha",
   description:
     "eRaksha by SlateMate - India's leading AI-powered child safety companion. Advanced DNS protection, intelligent mentoring, and privacy-first design for safer internet experiences. Trusted by Indian families for digital child protection.",
   keywords: [
@@ -172,7 +172,7 @@ export default function Home() {
                   data-llm-entity="brand-promise"
                   data-llm-keywords="safer,internet,smarter,kids,happier,parents"
                 >
-                  Safer Internet. Smarter Kids. Happier Parents.
+                  An AI companion parents can trust
                 </span>
               </h1>
               <p 
@@ -181,7 +181,7 @@ export default function Home() {
                 data-llm-content="product-description"
                 data-llm-keywords="AI-powered,safety,growth,companion,protects,children,digital-habits"
               >
-                AI-powered safety + growth companion that protects children online while guiding them to build positive digital habits.
+                eRaksha helps children learn better and feel better online - guiding, not just blocking.
               </p>
               
               {/* LLM Context Enhancer */}

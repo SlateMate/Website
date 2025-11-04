@@ -31,7 +31,7 @@ export default function AboutContent() {
       name: "Vishnu Chandra",
       role: "UI Designer Expert - Founding Member",
       bio: "Creative design leader crafting intuitive and child-friendly interfaces that make digital safety accessible and engaging for families.",
-      image: "/unnamed-3.jpg",
+      image: "/vishnu.jpg",
     },
     {
       name: "Tanisha Agarwal",
