@@ -193,9 +193,7 @@ export default function BlogPage() {
                 <ScrollReveal key={post.id} delay={index * 0.1}>
                   <Link href={`/blog/${post.id}`}>
                     <div className={`group bg-gradient-to-br ${post.gradient} p-6 rounded-xl border-2 border-orange/30 hover:border-orange/60 hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer h-full flex flex-col relative overflow-hidden`}>
-                      {/* Trending Badge */}
                       
-
                       {/* Image */}
                       <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden bg-muted">
                         <Image 

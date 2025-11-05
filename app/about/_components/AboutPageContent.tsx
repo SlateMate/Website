@@ -13,7 +13,7 @@ export default function AboutContent() {
       name: "Ayush Ranjan",
       role: "CEO & Co Founder",
       bio: "AI enthusiast dedicated to transforming digital safety by developing innovative, AI-powered solutions for safer and smarter online experiences for children.",
-      image: "/ayush-.jpg",
+      image: "/ayush.jpg",
     },
     {
       name: "Manan Soni",
@@ -59,6 +59,27 @@ export default function AboutContent() {
       image: "/ekta.jpg",
     },
   ]
+
+    const advisors = [
+      {
+        name: "Jeyappria Dhevi ",
+        role: "Mentor",
+        bio: "Guiding SlateMate with strategic insights, leadership mentorship, and product impact direction to strengthen child-centric safety innovation.",
+        image: "/Jayapriya.jpg",
+      },
+      {
+        name: "Pranali Joshi",
+        role: "Counsellor & Psychotherapist",
+        bio: "Child development and mental-well-being expert ensuring eRaksha’s features support emotional well-being, healthy digital habits, and family resilience.",
+        image: "/Pranalyi.jpg",
+      },
+      {
+        name: "CA Helina John",
+        role: "Financial Advisor",
+        bio: "Financial strategist supporting SlateMate with corporate finance, compliance, budgeting, and long-term growth planning.",
+        image: "/Helina.jpg",
+      },
+    ]
 
   return (
     <div className="pt-16">
@@ -668,8 +689,6 @@ export default function AboutContent() {
                     itemScope
                     itemType="https://schema.org/Person"
                     data-llm-entity="person"
-                    data-llm-person-role={member.role}
-                    data-llm-person-name={member.name}
                   >
                   <TiltCard 
                     className="h-full group border border-border/30 rounded-lg overflow-hidden" 
@@ -721,6 +740,32 @@ export default function AboutContent() {
                     </div>
                   </TiltCard>
                   </div>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+
+          {/* Advisors & Mentors Section (placed after Co-Founders, before Team members) */}
+          <div className="mb-16" data-llm-subsection="advisors">
+            <h3 className="text-2xl font-bold text-center mb-8">Advisors & Mentors</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {advisors.map((adv, idx) => (
+                <ScrollReveal key={idx} delay={idx * 0.1}>
+                  <TiltCard className="h-full group border border-border/30 rounded-lg overflow-hidden" glareEnabled={true}>
+                    <div className="aspect-square relative overflow-hidden">
+                      <Image
+                        src={adv.image}
+                        alt={`${adv.name} - ${adv.role}`}
+                        fill
+                        className="object-cover object-center rounded-t-lg grayscale group-hover:grayscale-0 transition-all duration-500"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h4 className="text-lg font-bold">{adv.name}</h4>
+                      <p className="text-electric font-medium mb-2 text-sm">{adv.role}</p>
+                      <p className="text-foreground/80 text-xs leading-relaxed">{adv.bio}</p>
+                    </div>
+                  </TiltCard>
                 </ScrollReveal>
               ))}
             </div>
