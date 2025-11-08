@@ -19,6 +19,7 @@ const navItems: NavItem[] = [
   { title: "eRaksha", href: "/product" },
   { title: "Features", href: "/features" },
   { title: "Pricing", href: "/pricing" },
+  { title: "Resources", href: "/resources" },
   { title: "About", href: "/about" },
 ]
 
